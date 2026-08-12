@@ -1,0 +1,26 @@
+# --- HUMANS.TXT - Zachary Kai
+
+# -- Maintainer
+
+# Zachary Kai: zacharykai.net
+
+# -- Site
+
+# Established: 2024
+# Technologies: Static HTML + CSS, Some PHP Scripts
+# Tools: VSCodium, Vultur
+
+# -- With Thanks
+
+# Ariel Salminen: arielsalminen.com
+# Chris Glass: chrisglass.com
+# Chris Smith: chameth.com
+# Derek Sivers: sive.rs
+# Everest Pipkin: everest-pipkin.com
+# James: jamesg.blog
+# Leo Babauta: mnmlist.com + zenhabits.net
+# Maggie Appleton: maggieappleton.com
+# Rishi Sreehari: rishikeshs.com
+# Rosaria Delacroix: rosariadelacroix.neocities.org
+# Ryan Barrett: snarfed.org
+# Winnie Lim: winnielim.org

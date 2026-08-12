@@ -1,0 +1,3645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:zk="https://zacharykai.net/sitemap-ext">
+
+    <url>
+        <zk:title>Homepage</zk:title>
+        <loc>https://zacharykai.net/</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my site. Explore my space fantasy writing, IndieWeb projects, and more.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,indieweb,writing</zk:tags>
+    </url>
+
+    <!-- PAGES -->
+
+    <url>
+        <!-- About -->
+        <zk:title>About</zk:title>
+        <loc>https://zacharykai.net/about</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my mini autobiography, press, intentions, and wishes.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,queer</zk:tags>
+    </url>
+
+    <url>
+        <!-- Accessibility -->
+        <zk:title>Accessibility</zk:title>
+        <loc>https://zacharykai.net/accessibility</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what features this site has/are planned.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Art -->
+        <zk:title>Art</zk:title>
+        <loc>https://zacharykai.net/art</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a hub for my portfolio: collages, digital art, traditional drawings, gods eyes, and cosplay.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Avatars -->
+        <zk:title>Avatars</zk:title>
+        <loc>https://zacharykai.net/avatars</loc>
+        <lastmod>2025-12-10</lastmod>
+        <zk:content>my representative avatars, created for fun's sake.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>creative,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Beverage -->
+        <zk:title>Beverage</zk:title>
+        <loc>https://zacharykai.net/beverage</loc>
+        <lastmod>2025-12-10</lastmod>
+        <zk:content>would you like to meet for one? I would!</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>community,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Bookmarklets -->
+        <zk:title>Bookmarklets</zk:title>
+        <loc>https://zacharykai.net/bookmarklets</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>useful snippets of Javascript.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>useful_things</zk:subcategory>
+        <zk:tags>resources,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Bookmarks -->
+        <zk:title>Bookmarks</zk:title>
+        <loc>https://zacharykai.net/bookmarks</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>links I've found fascinating.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Books I Didn't Finish -->
+        <zk:title>Books I Didn't Finish</zk:title>
+        <loc>https://zacharykai.net/dnf</loc>
+        <lastmod>2026-07-21</lastmod>
+        <zk:content>books I started but didn't finish, organized by genre.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Books To Read -->
+        <zk:title>Books To Read</zk:title>
+        <loc>https://zacharykai.net/tbr</loc>
+        <lastmod>2026-07-21</lastmod>
+        <zk:content>every book I want to read, organized by genre.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Buttons -->
+        <zk:title>Buttons</zk:title>
+        <loc>https://zacharykai.net/buttons</loc>
+        <lastmod>2025-12-10</lastmod>
+        <zk:content>little buttons directing you to delightful web corners.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>community,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Changelog -->
+        <zk:title>Changelog</zk:title>
+        <loc>https://zacharykai.net/changelog</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>all site changes, reverse-chronologically.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Cite -->
+        <zk:title>Cite</zk:title>
+        <loc>https://zacharykai.net/cite</loc>
+        <lastmod>2026-02-01</lastmod>
+        <zk:content>how to cite pages on my site, and how I cite personal sites on my blog.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Collages -->
+        <zk:title>Collages</zk:title>
+        <loc>https://zacharykai.net/art/collages</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>the ones I've made from paper and glue.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Colophon -->
+        <zk:title>Colophon</zk:title>
+        <loc>https://zacharykai.net/colophon</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>more on this site, internet principles, numbers, and esoterica.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Cosplay -->
+        <zk:title>Cosplay</zk:title>
+        <loc>https://zacharykai.net/art/cosplay</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>dressing up and stepping into character.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Defaults -->
+        <zk:title>Defaults</zk:title>
+        <loc>https://zacharykai.net/defaults</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the usual tools I use for various purposes.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Events -->
+        <zk:title>Events</zk:title>
+        <loc>https://zacharykai.net/events</loc>
+        <lastmod>2025-12-06</lastmod>
+        <zk:content>online events I host. I'd love to have you join!</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>indieweb,community,events</zk:tags>
+    </url>
+
+    <url>
+        <!-- HTML Day: Online -->
+        <zk:title>HTML Day: Online</zk:title>
+        <loc>https://zacharykai.net/events/htmlday</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>come write HTML in company, on the internet. two one-hour online sessions for HTML Day, 2026.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>indieweb,community,events,html</zk:tags>
+    </url>
+
+    <url>
+        <!-- Pixel &amp; Prose -->
+        <zk:title>Pixel &amp; Prose</zk:title>
+        <loc>https://zacharykai.net/events/pixelprose</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>a free online, silent, co-creating session for folks who like making things on the internet.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>indieweb,community,events,html</zk:tags>
+    </url>
+
+    <url>
+        <!-- Digital Art -->
+        <zk:title>Digital Art</zk:title>
+        <loc>https://zacharykai.net/art/digital-art</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>pieces I've drawn on the tablet/computer.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Gods' Eyes -->
+        <zk:title>Gods' Eyes</zk:title>
+        <loc>https://zacharykai.net/art/gods-eyes</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>my portfolio of the ones I've made.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Guestbook -->
+        <zk:title>Guestbook</zk:title>
+        <loc>https://zacharykai.net/guestbook</loc>
+        <lastmod>2026-06-28</lastmod>
+        <zk:content>go on, sign it!</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Favorites -->
+        <zk:title>Favorites</zk:title>
+        <loc>https://zacharykai.net/favorites</loc>
+        <lastmod>2026-02-08</lastmod>
+        <zk:content>lists of my loves in various categories.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Flipped -->
+        <zk:title>Flipped</zk:title>
+        <loc>https://zacharykai.net/flipped</loc>
+        <lastmod>2026-07-20</lastmod>
+        <zk:content>a reverse-chronological log of the zines and magazine issues I've read.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>media</zk:subsubcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Hello -->
+        <zk:title>Hello</zk:title>
+        <loc>https://zacharykai.net/hello</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>details on contacting me: email, meet, message, or trade with me (please do!)</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Ideas -->
+        <zk:title>Ideas</zk:title>
+        <loc>https://zacharykai.net/ideas</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>things I'd like to make and concepts that've caught my attention.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>creative,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Fragments -->
+        <zk:title>Fragments</zk:title>
+        <loc>https://zacharykai.net/fragments</loc>
+        <lastmod>2026-07-21</lastmod>
+        <zk:content>a scrap heap of fragments: half-thoughts, turns of phrase, and words caught mid-flight.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>creative,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Interests -->
+        <zk:title>Interests</zk:title>
+        <loc>https://zacharykai.net/interests</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what fascinates me.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Jots -->
+        <zk:title>Jots</zk:title>
+        <loc>https://zacharykai.net/jots</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my microblog, with occasional today-I-learned updates.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>personal,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Gratitudes -->
+        <zk:title>Gratitudes</zk:title>
+        <loc>https://zacharykai.net/gratitudes</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>my daily gratitude lists: small things, noticed and noted.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>personal,gratitude</zk:tags>
+    </url>
+
+    <url>
+        <!-- Mentions -->
+        <zk:title>Mentions</zk:title>
+        <loc>https://zacharykai.net/mentions</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>recording my webmentions: sent and recieved.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>indieweb,community</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Music -->
+        <zk:title>Music</zk:title>
+        <loc>https://zacharykai.net/music</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my favorite songs and three years of Spotify listening stats.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>media</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Now -->
+        <zk:title>Now</zk:title>
+        <loc>https://zacharykai.net/now</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I'm currently reading and working on.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Photos -->
+        <zk:title>Photos</zk:title>
+        <loc>https://zacharykai.net/photos</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>my gallery of shots, gathered into themed collections.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Photos: Where the Petals Keep Their Counsel -->
+        <zk:title>Where the Petals Keep Their Counsel</zk:title>
+        <loc>https://zacharykai.net/photos/blooms</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a collection of close blooms and blossoms.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Photos: Elders of Bark and Bough -->
+        <zk:title>Elders of Bark and Bough</zk:title>
+        <loc>https://zacharykai.net/photos/elders</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a collection of old trees, trunks, and canopies.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Photos: Where the Light Lies Down on Water -->
+        <zk:title>Where the Light Lies Down on Water</zk:title>
+        <loc>https://zacharykai.net/photos/water</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a collection of rivers, lakes, and falls at dawn and dusk.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Photos: Paths That Ask to Be Followed -->
+        <zk:title>Paths That Ask to Be Followed</zk:title>
+        <loc>https://zacharykai.net/photos/paths</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a collection of trails, boardwalks, and the green understory.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Photos: As Far as the Eye Will Wander -->
+        <zk:title>As Far as the Eye Will Wander</zk:title>
+        <loc>https://zacharykai.net/photos/vistas</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>a collection of wide views: coast, garden, and city.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Principles -->
+        <zk:title>Principles</zk:title>
+        <loc>https://zacharykai.net/principles</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the things that guide my internet existence.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Projects -->
+        <zk:title>Projects</zk:title>
+        <loc>https://zacharykai.net/projects</loc>
+        <lastmod>2026-06-05</lastmod>
+        <zk:content>the things I'm making, tinkering with, and slowly bringing to life.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Quotes -->
+        <zk:title>Quotes</zk:title>
+        <loc>https://zacharykai.net/quotes</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>interesting sayings I've gathered.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Quizzes -->
+        <zk:title>Quizzes</zk:title>
+        <loc>https://zacharykai.net/quizzes</loc>
+        <lastmod>2026-07-03</lastmod>
+        <zk:content>results from various quizzes I've taken online, for fun's sake.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Start Here -->
+        <zk:title>Start Here</zk:title>
+        <loc>https://zacharykai.net/start-here</loc>
+        <lastmod>2026-07-21</lastmod>
+        <zk:content>new to my corner of the web? A curated map to the best entry points.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Random -->
+        <zk:title>Random</zk:title>
+        <loc>https://zacharykai.net/random</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>click this link to go to a random page on my site!</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>navigation</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Recipes -->
+        <zk:title>Recipes</zk:title>
+        <loc>https://zacharykai.net/recipes</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>tested, simplified favorites, index of recipe pages.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Recipes: Banana Bread -->
+        <zk:title>Banana Bread</zk:title>
+        <loc>https://zacharykai.net/recipes/banana-bread</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>simple banana bread recipe, plus a no self-raising-flour/no maple syrup alternative.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>recipe</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Recipes: Spiced Biscuits -->
+        <zk:title>Spiced Biscuits</zk:title>
+        <loc>https://zacharykai.net/recipes/spiced-biscuits</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>simple spiced biscuit recipe.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>recipe</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Recipes: Zucchini Slice -->
+        <zk:title>Zucchini Slice</zk:title>
+        <loc>https://zacharykai.net/recipes/zucchini-slice</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>savoury zucchini slice recipe, adapted from The Australian Women's Weekly.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>recipe</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Recipes: Carrot Cake -->
+        <zk:title>Carrot Cake</zk:title>
+        <loc>https://zacharykai.net/recipes/carrot-cake</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>carrot cake recipe with cream cheese frosting, adapted from The Australian Women's Weekly.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>recipe</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Recipes: Lemon &amp; Blueberry Cake -->
+        <zk:title>Lemon &amp; Blueberry Cake</zk:title>
+        <loc>https://zacharykai.net/recipes/lemon-blueberry-cake</loc>
+        <lastmod>2026-07-29</lastmod>
+        <zk:content>lemon and blueberry cake recipe, adapted from The Australian Women's Weekly.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>recipe</zk:subsubcategory>
+        <zk:tags>food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Save -->
+        <zk:title>Save</zk:title>
+        <loc>https://zacharykai.net/save</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>hopefully useful discount and referral codes.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>useful_things</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Search -->
+        <zk:title>Search</zk:title>
+        <loc>https://zacharykai.net/search</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>use it to find what you're looking for.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>navigation</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Sitemap -->
+        <zk:title>Sitemap</zk:title>
+        <loc>https://zacharykai.net/sitemap</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>a curated index of everything on my site.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>navigation</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Spotify -->
+        <zk:title>Spotify</zk:title>
+        <loc>https://zacharykai.net/spotify</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>interesting listening stats from years past.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>media</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Statistics -->
+        <zk:title>Statistics</zk:title>
+        <loc>https://zacharykai.net/statistics</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>numbers and esoterica related to this site.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Subscribe -->
+        <zk:title>Subscribe</zk:title>
+        <loc>https://zacharykai.net/subscribe</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my RSS Feed and how to subscribe.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>navigation</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Thanks -->
+        <zk:title>Thanks</zk:title>
+        <loc>https://zacharykai.net/thanks</loc>
+        <lastmod>2026-06-12</lastmod>
+        <zk:content>my gratitude to those who've helped make this site better.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Top4 -->
+        <zk:title>Top 4</zk:title>
+        <loc>https://zacharykai.net/top4</loc>
+        <lastmod>2026-01-06</lastmod>
+        <zk:content>lists of my top three plus one.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Trades -->
+        <zk:title>Trades</zk:title>
+        <loc>https://zacharykai.net/trades</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I'd love to trade with you and how to organize one.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>community,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Traditional -->
+        <zk:title>Traditional</zk:title>
+        <loc>https://zacharykai.net/art/traditional</loc>
+        <lastmod>2026-06-21</lastmod>
+        <zk:content>my drawings on paper, in pencil, marker, and pen.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>art</zk:subsubcategory>
+        <zk:tags>creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- UnOffice Hours -->
+        <zk:title>UnOffice Hours</zk:title>
+        <loc>https://zacharykai.net/unoffice-hours</loc>
+        <lastmod>2025-04-14</lastmod>
+        <zk:content>i'd love to meet you for a video or audio call!</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+   
+    <url>
+        <!-- Uses -->
+        <zk:title>Uses</zk:title>
+        <loc>https://zacharykai.net/uses</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the tech tooks I use + referral links for services I find useful (and you might too!)</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>resources,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Wants -->
+        <zk:title>Wants</zk:title>
+        <loc>https://zacharykai.net/wants</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>things and concepts I wish to embody.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Watched -->
+        <zk:title>Watched</zk:title>
+        <loc>https://zacharykai.net/watched</loc>
+        <lastmod>2026-07-03</lastmod>
+        <zk:content>an organized log of films, tv shows, and online videos I'd recommend.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>media</zk:subsubcategory>
+        <zk:tags>film,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Webmentions -->
+        <zk:title>Webmentions</zk:title>
+        <loc>https://zacharykai.net/webmentions</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>places the site's been mentioned on the internet.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Webrings -->
+        <zk:title>Webrings</zk:title>
+        <loc>https://zacharykai.net/webrings</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>all the ones this site belongs to.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>community,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Words -->
+        <zk:title>Words</zk:title>
+        <loc>https://zacharykai.net/words</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>interesting pieces of the English language.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>curated</zk:subsubcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Wordle -->
+        <zk:title>Wordle</zk:title>
+        <loc>https://zacharykai.net/wordle</loc>
+        <lastmod>2026-07-03</lastmod>
+        <zk:content>a reverse-chronological log of my Wordle results.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:subsubcategory>media</zk:subsubcategory>
+        <zk:tags>games</zk:tags>
+    </url>
+
+    <url>
+        <!-- Tags -->
+        <zk:title>Tags</zk:title>
+        <loc>https://zacharykai.net/tags</loc>
+        <lastmod>2026-03-01</lastmod>
+        <zk:content>browse pages by tag.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>navigation</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Collections -->
+        <zk:title>Collections</zk:title>
+        <loc>https://zacharykai.net/collections</loc>
+        <lastmod>2026-08-02</lastmod>
+        <zk:content>themed groupings of my posts: challenges, community prompts, and occasions that span months or years.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>indieweb,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- Blagust -->
+        <zk:title>Blagust</zk:title>
+        <loc>https://zacharykai.net/collections/blagust</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>blogging every day of August, in the spirit of Blaugust. One post a day, whatever turns up.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>blogging,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- IndieWeb Carnival -->
+        <zk:title>IndieWeb Carnival</zk:title>
+        <loc>https://zacharykai.net/collections/iwc</loc>
+        <lastmod>2026-08-02</lastmod>
+        <zk:content>my entries for the monthly IndieWeb Carnival writing prompt, plus the editions I've hosted and their roundups.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>indieweb,community</zk:tags>
+    </url>
+
+    <!-- LISTS -->
+
+    <url>
+        <!-- Crosswinds + Currents Directory -->
+        <zk:title>Crosswinds + Currents</zk:title>
+        <loc>https://zacharykai.net/lists/crosscurrent</loc>
+        <lastmod>2026-01-16</lastmod>
+        <zk:content>a directory of sites by people living in or from Asia/the Pacific.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Fanfic Writers Collective -->
+        <zk:title>Fanfic Writers Collective</zk:title>
+        <loc>https://zacharykai.net/lists/fanfiction</loc>
+        <lastmod>2025-04-14</lastmod>
+        <zk:content>a directory of folks with sites writing fanfiction.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Guestbooks Galore -->
+        <zk:title>Guestbooks Galore</zk:title>
+        <loc>https://zacharykai.net/lists/guestbooks</loc>
+        <lastmod>2026-02-21</lastmod>
+        <zk:content>a directory of personal sites that host guestbooks.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,indieweb</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Oceania Web Atlas -->
+        <zk:title>Oceania Web Atlas</zk:title>
+        <loc>https://zacharykai.net/lists/oceania</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>a directory of sites by people living in or from Oceania.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,travel</zk:tags>
+    </url>
+
+    <url>
+        <!-- Proust Questionnaire -->
+        <zk:title>Proust Questionnaire</zk:title>
+        <loc>https://zacharykai.net/lists/proust</loc>
+        <lastmod>2026-02-15</lastmod>
+        <zk:content>a directory of sites featuring answers to the Proust Questionnaire.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Queer Web Directory -->
+        <zk:title>Queer Web Directory</zk:title>
+        <loc>https://zacharykai.net/lists/queer</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>a directory of sites by queer folks around the world.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,queer</zk:tags>
+    </url>
+
+    <url>
+        <!-- Star Wars Webring -->
+        <zk:title>Star Wars Webring</zk:title>
+        <loc>https://zacharykai.net/lists/starwars</loc>
+        <lastmod>2025-07-06</lastmod>
+        <zk:content>for folks who enjoy Star Wars.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>webrings</zk:subcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Static HTML Site Directory -->
+        <zk:title>Static HTML Site Directory</zk:title>
+        <loc>https://zacharykai.net/lists/html</loc>
+        <lastmod>2025-07-10</lastmod>
+        <zk:content>a directory of sites running on Static HTML files.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,indieweb,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Title Traders -->
+        <zk:title>Title Traders</zk:title>
+        <loc>https://zacharykai.net/lists/titletrade</loc>
+        <lastmod>2026-02-01</lastmod>
+        <zk:content>a directory of folks willing to trade blog post titles as a collaborative effort.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>site_directories</zk:subcategory>
+        <zk:tags>community,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Vintage Car Webring -->
+        <zk:title>Vintage Car Webring</zk:title>
+        <loc>https://zacharykai.net/lists/vintagecars</loc>
+        <lastmod>2026-01-22</lastmod>
+        <zk:content>connecting vintage car aesthetics and design enthusiasts.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>webrings</zk:subcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+
+    <url>
+        <!-- 35 Things That Made My 2024 -->
+        <zk:title>35 Things That Made My 2024</zk:title>
+        <loc>https://zacharykai.net/lists/24list</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I appreciated in the year.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- 100 Things That Made My 2025 -->
+        <zk:title>100 Things That Made My 2025</zk:title>
+        <loc>https://zacharykai.net/lists/25list</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I'm grateful for in the year.</zk:content>
+        <zk:category>lists</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <!-- NOTES -->
+
+    <url>
+        <!-- 40 Questions To Ask Every Year (2025) -->
+        <zk:title>40 Questions To Ask Every Year (2025)</zk:title>
+        <loc>https://zacharykai.net/notes/40qs25</loc>
+        <lastmod>2025-12-31</lastmod>
+        <zk:content>a guided list of reflections for the year.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- 50 Tiny Cogs -->
+        <zk:title>50 Tiny Cogs</zk:title>
+        <loc>https://zacharykai.net/notes/50cogs</loc>
+        <lastmod>2026-02-15</lastmod>
+        <zk:content>things that give my life meaning.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- Painting Impressions With James -->
+        <zk:title>Painting Impressions With James</zk:title>
+        <loc>https://zacharykai.net/notes/painting</loc>
+        <lastmod>2025-04-12</lastmod>
+        <zk:content>where we chose and shared our thoughts on artworks.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>collaborative</zk:subcategory>
+        <zk:tags>creative,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Authenticity On The Web -->
+        <zk:title>Authenticity On The Web</zk:title>
+        <loc>https://zacharykai.net/notes/authenticity</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>why does it mean so many conflicting things on the internet?</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>indieweb,personal,reflection,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Consciousness Is The Most Expensive Accident -->
+        <zk:title>Consciousness Is The Most Expensive Accident</zk:title>
+        <loc>https://zacharykai.net/notes/consciousness</loc>
+        <lastmod>2026-02-13</lastmod>
+        <zk:content>on the cost of noticing.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- An Endless Summer Doesn't Seem Romantic Anymore -->
+        <zk:title>An Endless Summer Doesn't Seem Romantic Anymore</zk:title>
+        <loc>https://zacharykai.net/notes/endlesssummer</loc>
+        <lastmod>2026-02-13</lastmod>
+        <zk:content>missing the mythic summer break.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,travel,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Emerging Writers Festival 2025 -->
+        <zk:title>Emerging Writers Festival (2025)</zk:title>
+        <loc>https://zacharykai.net/notes/ewf25</loc>
+        <lastmod>2026-02-13</lastmod>
+        <zk:content>notes from attending in September 2025.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>writing,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- A Sense Of Place -->
+        <zk:title>A Sense Of Place</zk:title>
+        <loc>https://zacharykai.net/notes/place</loc>
+        <lastmod>2025-07-05</lastmod>
+        <zk:content>what a strange concept when your existence always oscillates.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,travel</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Blog Questions Challenge 2025 -->
+        <zk:title>Blog Questions Challenge 2025</zk:title>
+        <loc>https://zacharykai.net/notes/blogqna25</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my answers to the questions posed.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Facts About Me -->
+        <zk:title>Facts About Me</zk:title>
+        <loc>https://zacharykai.net/notes/facts</loc>
+        <lastmod>2026-02-06</lastmod>
+        <zk:content>twenty facts about me, inspired by Peige and Becky's posts.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- Fanfiction Conversation With Sara Jaksa -->
+        <zk:title>Fanfiction Conversation With Sara Jaksa</zk:title>
+        <loc>https://zacharykai.net/notes/fanfic</loc>
+        <lastmod>2025-08-05</lastmod>
+        <zk:content>a discussion of fan culture and writing.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>collaborative</zk:subcategory>
+        <zk:tags>writing,community</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Goals For 2025 -->
+        <zk:title>Goals For 2025</zk:title>
+        <loc>https://zacharykai.net/notes/25goals</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>things I wish to achieve.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>goal_setting</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- Goals For 2026 -->
+        <zk:title>Goals For 2026</zk:title>
+        <loc>https://zacharykai.net/notes/26goals</loc>
+        <lastmod>2025-12-31</lastmod>
+        <zk:content>what I want to do.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>goal_setting</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+    
+    <url>
+        <!-- How Travel Is An Engine For Writing -->
+        <zk:title>How Travel Is An Engine For Writing</zk:title>
+        <loc>https://zacharykai.net/notes/writingengine</loc>
+        <lastmod>2025-07-05</lastmod>
+        <zk:content>i thought about how it makes me a better writer.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>writing,travel,reflection,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Literature Conversation With Sara Jaksa -->
+        <zk:title>Literature Conversation With Sara Jaksa</zk:title>
+        <loc>https://zacharykai.net/notes/literature</loc>
+        <lastmod>2026-01-15</lastmod>
+        <zk:content>a bookish discussion.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>collaborative</zk:subcategory>
+        <zk:tags>writing,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- The Unexpected Ambassador -->
+        <zk:title>The Unexpected Ambassador</zk:title>
+        <loc>https://zacharykai.net/notes/icmar25</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>to exist is to explain.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>personal,queer,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- IndieWeb Carnival: Feb 2026 -->
+        <zk:title>IndieWeb Carnival: Feb 2026</zk:title>
+        <loc>https://zacharykai.net/notes/icfeb26</loc>
+        <lastmod>2026-02-01</lastmod>
+        <zk:content>the theme is Intersecting Interests.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>indieweb,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Curiosity As A Form Of Life-Giving -->
+        <zk:title>Curiosity As A Form Of Life-Giving</zk:title>
+        <loc>https://zacharykai.net/notes/curiosity</loc>
+        <lastmod>2026-05-29</lastmod>
+        <zk:content>a love letter to curiosity.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>personal,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- IndieWeb Fiction Carnival: Feb 2026 -->
+        <zk:title>IndieWeb Fiction Carnival: Feb 2026</zk:title>
+        <loc>https://zacharykai.net/notes/ifcfeb26</loc>
+        <lastmod>2026-02-01</lastmod>
+        <zk:content>the prompt is: we've got to dream past it.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_fiction_carnival</zk:subsubcategory>
+        <zk:tags>indieweb,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Indieweb Book Club: Oct 2025 -->
+        <zk:title>Indieweb Book Club: Oct 2025</zk:title>
+        <loc>https://zacharykai.net/notes/iwboct25</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the Creative Act by Rick Rubin</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>book_club</zk:subsubcategory>
+        <zk:tags>indieweb,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Broad Band: Review -->
+        <zk:title>Broad Band by Claire L. Evans</zk:title>
+        <loc>https://zacharykai.net/notes/rlr/broadband</loc>
+        <lastmod>2026-06-03</lastmod>
+        <zk:content>a review of the women who made the internet, this month's IndieWeb Book Club pick.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>book_club</zk:subsubcategory>
+        <zk:tags>indieweb,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Indieweb Movie Club: Apr 2025 -->
+        <zk:title>Indieweb Movie Club: Apr 2025</zk:title>
+        <loc>https://zacharykai.net/notes/iwmapr25</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the Castle (1997)</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>movie_club</zk:subsubcategory>
+        <zk:tags>indieweb,creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Indieweb Movie Club: Sep 2025 -->
+        <zk:title>Indieweb Movie Club: Sep 2025</zk:title>
+        <loc>https://zacharykai.net/notes/iwmsep25</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>the Wild Robot (2024)</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>movie_club</zk:subsubcategory>
+        <zk:tags>indieweb,creative</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Liminal Festival (2024) -->
+        <zk:title>Liminal Festival (2024)</zk:title>
+        <loc>https://zacharykai.net/notes/lf24</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I took from the conversations.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>writing,community,reflection</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Mildura Writers Festival (2024) -->
+        <zk:title>Mildura Writers Festival (2024)</zk:title>
+        <loc>https://zacharykai.net/notes/mwf24</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what I learned from attending.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>writing,reflection</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Minds Within Mine -->
+        <zk:title>Minds Within Mine</zk:title>
+        <loc>https://zacharykai.net/notes/mwm</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>what my characters might say about me.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>writing,personal,creative</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Music Questions Challenge -->
+        <zk:title>Music Questions Challenge</zk:title>
+        <loc>https://zacharykai.net/notes/musicqna</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>a little insight into my musical tastes.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>creative,personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- My 2025 Goals So Far -->
+        <zk:title>My 2025 Goals So Far</zk:title>
+        <loc>https://zacharykai.net/notes/25qreview</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>let's do a six-month review and see how I went!</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,trades</zk:tags>
+    </url>
+
+        <url>
+        <!-- My Fondest Childhood Memory -->
+        <zk:title>My Fondest Childhood Memory</zk:title>
+        <loc>https://zacharykai.net/notes/childhood</loc>
+        <lastmod>2026-02-14</lastmod>
+        <zk:content>on teaching myself history through Horrible Histories.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- No Going Back -->
+        <zk:title>No Going Back</zk:title>
+        <loc>https://zacharykai.net/notes/noreturn</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>if you search for me on social media, you won't find me.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,indieweb,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Punchy Prose -->
+        <zk:title>Punchy Prose</zk:title>
+        <loc>https://zacharykai.net/notes/pp</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>words I watch for in my writing, to replace/remove for stronger prose.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>writing,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Proust's Questionnaire -->
+        <zk:title>Proust's Questionnaire</zk:title>
+        <loc>https://zacharykai.net/notes/proust</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>my answers to these time-honored questions.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- Sandwich Questionnaire -->
+        <zk:title>Sandwich Questionnaire</zk:title>
+        <loc>https://zacharykai.net/notes/sandwiches</loc>
+        <lastmod>2026-02-06</lastmod>
+        <zk:content>exploring preferences and the joy of stuff between bread.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal,food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Shot Silk And Sapphire Spiders -->
+        <zk:title>Shot Silk And Sapphire Spiders</zk:title>
+        <loc>https://zacharykai.net/notes/silknspiders</loc>
+        <lastmod>2025-06-24</lastmod>
+        <zk:content>if there's one thing I need, it's finding joy in nuance.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,creative,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Site Ideas -->
+        <zk:title>Site Ideas</zk:title>
+        <loc>https://zacharykai.net/notes/site-ideas</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>suggestions for what to put on your site.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>indieweb,resources,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Syzygy -->
+        <zk:title>Syzygy</zk:title>
+        <loc>https://zacharykai.net/notes/syzygy</loc>
+        <lastmod>2025-07-05</lastmod>
+        <zk:content>when encountering this, I didn't know its pronunciation, let alone its meaning!</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,writing,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Ten Pointless Things About Me -->
+        <zk:title>Ten Pointless Things About Me</zk:title>
+        <loc>https://zacharykai.net/notes/pointless</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>a compilation of useless yet fun facts.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+    
+    <url>
+        <!-- The Colbert Questionert -->
+        <zk:title>The Colbert Questionert</zk:title>
+        <loc>https://zacharykai.net/notes/colbert</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>my answers to these fifteen questions.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
+        <!-- The Fictional Worlds I'd Live In -->
+        <zk:title>The Fictional Worlds I'd Live In</zk:title>
+        <loc>https://zacharykai.net/notes/otherworlds</loc>
+        <lastmod>2025-06-24</lastmod>
+        <zk:content>if I had a one-way ticket, where would I go?</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>writing,creative,personal,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- The Notification I Look Forward To The Most -->
+        <zk:title>The Notification I Look Forward To The Most</zk:title>
+        <loc>https://zacharykai.net/notes/notifications</loc>
+        <lastmod>2025-06-24</lastmod>
+        <zk:content>how do I do this phrase justice?</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,community,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Things To Do While Waiting -->
+        <zk:title>Things To Do While Waiting</zk:title>
+        <loc>https://zacharykai.net/notes/waiting</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>liminal time isn't a curse. It's an opportunity.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>personal,reflection,resources</zk:tags>
+    </url>
+    
+    <url>
+        <!-- Things You'd Perhaps Enjoy -->
+        <zk:title>Things You'd Perhaps Enjoy</zk:title>
+        <loc>https://zacharykai.net/notes/rdec24</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>things I wish to share with you, hoping you'll enjoy them.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>resources,community</zk:tags>
+    </url>
+    
+    <url>
+        <!-- What Is This Feeling, If Not Love? -->
+        <zk:title>What Is This Feeling, If Not Love?</zk:title>
+        <loc>https://zacharykai.net/notes/tooeasily</loc>
+        <lastmod>2025-04-19</lastmod>
+        <zk:content>i do this all the time. And not in the conventional sense.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection</zk:tags>
+    </url>
+    
+    <url>
+        <!-- How To Join The IndieWeb Wiki -->
+        <zk:title>How To Join The IndieWeb Wiki</zk:title>
+        <loc>https://zacharykai.net/notes/wikify</loc>
+        <lastmod>2026-05-07</lastmod>
+        <zk:content>a step-by-step guide to joining.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>indieweb,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Writing Sparks -->
+        <zk:title>Writing Sparks</zk:title>
+        <loc>https://zacharykai.net/notes/sparks</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>prompts for braving the blank page.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>resources</zk:subcategory>
+        <zk:tags>writing,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Weaving A Closer-Knit Web -->
+        <zk:title>Weaving A Closer-Knit Web</zk:title>
+        <loc>https://zacharykai.net/notes/weaving</loc>
+        <lastmod>2026-02-13</lastmod>
+        <zk:content>on the collaborative nature of the internet.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>indieweb,community,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- IndieWeb Carnival Roundup: Feb 2026 -->
+        <zk:title>IndieWeb Carnival Roundup: Feb 2026</zk:title>
+        <loc>https://zacharykai.net/notes/icfeb26roundup</loc>
+        <lastmod>2026-03-01</lastmod>
+        <zk:content>it's come to a close.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>indieweb,community,roundup</zk:tags>
+    </url>
+
+    <url>
+        <!-- IndieWeb Fiction Carnival Roundup: Feb 2026 -->
+        <zk:title>IndieWeb Fiction Carnival Roundup: Feb 2026</zk:title>
+        <loc>https://zacharykai.net/notes/ifcfeb26roundup</loc>
+        <lastmod>2026-03-01</lastmod>
+        <zk:content>it's come to a close.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_fiction_carnival</zk:subsubcategory>
+        <zk:tags>indieweb,writing,roundup</zk:tags>
+    </url>
+
+    <url>
+        <!-- The Strangest Thing Happened The Other Day... -->
+        <zk:title>The Strangest Thing Happened The Other Day...</zk:title>
+        <loc>https://zacharykai.net/notes/strangest</loc>
+        <lastmod>2026-03-03</lastmod>
+        <zk:content>a list of things noticed.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,trades</zk:tags>
+    </url>
+
+    <url>
+        <!-- Did We Lose Something In The Third Dimension -->
+        <zk:title>Did We Lose Something In The Third Dimension</zk:title>
+        <loc>https://zacharykai.net/notes/third</loc>
+        <lastmod>2026-04-14</lastmod>
+        <zk:content>on 2D animation's quiet disappearance.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>creative,reflection</zk:tags>
+    </url>
+
+    <url>
+        <!-- Tear Me Down, Build Me Back Up -->
+        <zk:title>Tear Me Down, Build Me Back Up</zk:title>
+        <loc>https://zacharykai.net/notes/tear</loc>
+        <lastmod>2026-05-29</lastmod>
+        <zk:content>a short experimental prose poem.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>fiction</zk:subcategory>
+        <zk:tags>fiction,indieweb,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- An Elaborate Excuse -->
+        <zk:title>An Elaborate Excuse</zk:title>
+        <loc>https://zacharykai.net/notes/icjul26</loc>
+        <lastmod>2026-08-01</lastmod>
+        <zk:content>two Halloween cosplays made out of thrift shop denim, chocolate box cardboard, and sticky tape.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>personal,creative,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Everything Has Unintended Consequences -->
+        <zk:title>Everything Has Unintended Consequences</zk:title>
+        <loc>https://zacharykai.net/notes/consequences</loc>
+        <lastmod>2026-08-02</lastmod>
+        <zk:content>how gold rush arsenic ended up in the toenails of children born a century and a half later.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection,history,science,environment</zk:tags>
+    </url>
+
+    <url>
+        <!-- A Whim, Two Days Late -->
+        <zk:title>A Whim, Two Days Late</zk:title>
+        <loc>https://zacharykai.net/notes/whim</loc>
+        <lastmod>2026-08-02</lastmod>
+        <zk:content>joining Blaugust two days late, why daily challenges and I don't get along, and what the indie web community's given me.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection,blogging,indieweb,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- HTML Day 2026 Is This Saturday -->
+        <zk:title>HTML Day 2026 Is This Saturday</zk:title>
+        <loc>https://zacharykai.net/notes/htmlday2026</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>HTML Day 2026 is Saturday, August 8. I'm hosting two online write-HTML-in-company sessions again, no RSVP required this year.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>announcements</zk:subcategory>
+        <zk:tags>indieweb,community,html,events</zk:tags>
+    </url>
+
+    <url>
+        <!-- What We Made On HTML Day 2026 -->
+        <zk:title>What We Made On HTML Day 2026</zk:title>
+        <loc>https://zacharykai.net/notes/html26recap</loc>
+        <lastmod>2026-08-09</lastmod>
+        <zk:content>notes and links from the two online sessions I hosted for HTML Day 2026: a typography tasting menu, poems written in HTML, silk-printed t-shirts, and a collage that turned into birds.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>indieweb,community,html,events</zk:tags>
+    </url>
+
+    <url>
+        <!-- There Is A Scalp Under The Hat -->
+        <zk:title>There Is A Scalp Under The Hat</zk:title>
+        <loc>https://zacharykai.net/notes/scalp</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>ten random facts about the human behind the blog, for Blaugust: flexible hips, a decade of hats, vegetables, and a fear of losing my accent.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>personal,reflection,blogging,food</zk:tags>
+    </url>
+
+    <url>
+        <!-- Memories With Art -->
+        <zk:title>Memories With Art</zk:title>
+        <loc>https://zacharykai.net/notes/artmemories</loc>
+        <lastmod>2026-08-06</lastmod>
+        <zk:content>a Blaugust guest post swap with James G.: he writes about the paintings and songs he sees when he closes his eyes, and I wrote a piece for his blog in return.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>creative,reflection,blogging,community</zk:tags>
+    </url>
+
+    <!-- OFFERINGS -->
+
+    <url>
+        <!-- Beta Reading -->
+        <zk:title>Beta Reading</zk:title>
+        <loc>https://zacharykai.net/offerings/beta-reading</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>beta reading services for fiction and non-fiction.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Blog & Newsletter Setup -->
+        <zk:title>Blog &amp; Newsletter Setup</zk:title>
+        <loc>https://zacharykai.net/offerings/blog-newsletter-setup</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>blog and newsletter setup services for writers and creatives.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Editing -->
+        <zk:title>Editing</zk:title>
+        <loc>https://zacharykai.net/offerings/editing</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>professional editing services for fiction and non-fiction.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Ghostwriting -->
+        <zk:title>Ghostwriting</zk:title>
+        <loc>https://zacharykai.net/offerings/ghostwriting</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>ghostwriting services for fiction and non-fiction.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Sensitivity Reading -->
+        <zk:title>Sensitivity Reading</zk:title>
+        <loc>https://zacharykai.net/offerings/sensitivity-reading</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>sensitivity reading services for fiction and non-fiction.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services,queer</zk:tags>
+    </url>
+
+    <url>
+        <!-- Transcriptions -->
+        <zk:title>Transcriptions</zk:title>
+        <loc>https://zacharykai.net/offerings/transcriptions</loc>
+        <lastmod>2026-07-31</lastmod>
+        <zk:content>transcription services turning audio, video, and handwriting into clean, accurate text.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>writing,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Website Making -->
+        <zk:title>Website Making</zk:title>
+        <loc>https://zacharykai.net/offerings/websites</loc>
+        <lastmod>2026-05-09</lastmod>
+        <zk:content>delightful personal websites built with static HTML.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>indieweb,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Workshops -->
+        <zk:title>Workshops</zk:title>
+        <loc>https://zacharykai.net/offerings/workshops</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>creative workshops covering drawing, writing, worldbuilding, and zine-making.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>creative,services</zk:tags>
+    </url>
+
+    <url>
+        <!-- Zine-Making -->
+        <zk:title>Zine-Making</zk:title>
+        <loc>https://zacharykai.net/offerings/zines</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>custom zine-making services for your creative projects.</zk:content>
+        <zk:category>offerings</zk:category>
+        <zk:subcategory>services</zk:subcategory>
+        <zk:tags>creative,services</zk:tags>
+    </url>
+
+    <!-- CATALOG -->
+
+    <url>
+        <!-- At Ease, Soldier -->
+        <zk:title>At Ease, Soldier</zk:title>
+        <loc>https://zacharykai.net/catalog/aes</loc>
+        <lastmod>2025-04-23</lastmod>
+        <zk:content>a fanfic about Bucky Barnes reclaiming himself.</zk:content>
+        <zk:category>catalog</zk:category>
+        <zk:subcategory>fanfic</zk:subcategory>
+        <zk:tags>writing,creative</zk:tags>
+    </url>
+
+    <url>
+        <!-- Splendid SciFi -->
+        <zk:title>Splendid SciFi</zk:title>
+        <loc>https://zacharykai.net/catalog/ss</loc>
+        <lastmod>2024-03-31</lastmod>
+        <zk:content>a curated collection of must-read science fiction books.</zk:content>
+        <zk:category>catalog</zk:category>
+        <zk:subcategory>zines</zk:subcategory>
+        <zk:tags>writing,creative</zk:tags>
+    </url>
+
+    <!-- TOOLS -->
+
+    <url>
+        <!-- 4x4 Sudoku Maker -->
+        <zk:title>4x4 Sudoku Maker</zk:title>
+        <loc>https://zacharykai.net/tools/4x4sudoku</loc>
+        <lastmod>2025-07-15</lastmod>
+        <zk:content>a dynamically generated 4x4 Sudoku puzzle and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- 6x6 Sudoku Maker -->
+        <zk:title>6x6 Sudoku Maker</zk:title>
+        <loc>https://zacharykai.net/tools/6x6sudoku</loc>
+        <lastmod>2025-07-15</lastmod>
+        <zk:content>a dynamically generated 6x6 Sudoku puzzle and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- 9x9 Sudoku Maker -->
+        <zk:title>9x9 Sudoku Maker</zk:title>
+        <loc>https://zacharykai.net/tools/9x9sudoku</loc>
+        <lastmod>2025-09-13</lastmod>
+        <zk:content>a random 9x9 Sudoku and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Circular Maze Maker -->
+        <zk:title>Circular Maze Maker</zk:title>
+        <loc>https://zacharykai.net/tools/circlemaze</loc>
+        <lastmod>2025-07-09</lastmod>
+        <zk:content>a random circular maze and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Cryptogram Maker -->
+        <zk:title>Cryptogram Maker</zk:title>
+        <loc>https://zacharykai.net/tools/cryptogram</loc>
+        <lastmod>2025-09-05</lastmod>
+        <zk:content>input a sentence to create a cryptogram and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Empty Line Remover -->
+        <zk:title>Empty Line Remover</zk:title>
+        <loc>https://zacharykai.net/tools/emptylines</loc>
+        <lastmod>2026-04-13</lastmod>
+        <zk:content>paste text to remove blank lines while preserving content.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>text</zk:subcategory>
+        <zk:tags>resources,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Honeycomb Maze Maker -->
+        <zk:title>Honeycomb Maze Maker</zk:title>
+        <loc>https://zacharykai.net/tools/honeycombmaze</loc>
+        <lastmod>2025-07-09</lastmod>
+        <zk:content>a random honeycomb maze and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Line Break Remover -->
+        <zk:title>Line Break Remover</zk:title>
+        <loc>https://zacharykai.net/tools/linebreaks</loc>
+        <lastmod>2026-04-13</lastmod>
+        <zk:content>paste text to remove line breaks into a single clean paragraph.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>text</zk:subcategory>
+        <zk:tags>resources,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- Mini Word Search Maker -->
+        <zk:title>Mini Word Search Maker</zk:title>
+        <loc>https://zacharykai.net/tools/miniwordsearch</loc>
+        <lastmod>2025-07-13</lastmod>
+        <zk:content>input words to create a mini word search and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- 8-Page Mini Zine Template -->
+        <zk:title>8-Page Mini Zine Template</zk:title>
+        <loc>https://zacharykai.net/tools/minizine</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>printable templates for folded mini zines.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>zines</zk:subcategory>
+        <zk:tags>creative,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Number Search Maker -->
+        <zk:title>Number Search Maker</zk:title>
+        <loc>https://zacharykai.net/tools/numbersearch</loc>
+        <lastmod>2025-07-13</lastmod>
+        <zk:content>input numbers to create a number search and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- 8-Page Quarter Zine Template -->
+        <zk:title>8-Page Quarter Zine Template</zk:title>
+        <loc>https://zacharykai.net/tools/quarterzine</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>printable templates for quarter-fold zines.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>zines</zk:subcategory>
+        <zk:tags>creative,resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Repeats Finder -->
+        <zk:title>Repeats Finder</zk:title>
+        <loc>https://zacharykai.net/tools/repeatfinder</loc>
+        <lastmod>2025-12-17</lastmod>
+        <zk:content>paste text to find repeated phrases and word echoes.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>text</zk:subcategory>
+        <zk:tags>resources,writing</zk:tags>
+    </url>
+
+    <url>
+        <!-- List Splitter -->
+        <zk:title>List Splitter</zk:title>
+        <loc>https://zacharykai.net/tools/splitlist</loc>
+        <lastmod>2026-04-22</lastmod>
+        <zk:content>paste a list to split it into three roughly equal batches.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>text</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Square Maze Maker -->
+        <zk:title>Square Maze Maker</zk:title>
+        <loc>https://zacharykai.net/tools/squaremaze</loc>
+        <lastmod>2025-09-29</lastmod>
+        <zk:content>a random square maze and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <url>
+        <!-- Word Search Maker -->
+        <zk:title>Word Search Maker</zk:title>
+        <loc>https://zacharykai.net/tools/wordsearch</loc>
+        <lastmod>2025-07-13</lastmod>
+        <zk:content>input words to create a word search and its solution.</zk:content>
+        <zk:category>tools</zk:category>
+        <zk:subcategory>puzzles</zk:subcategory>
+        <zk:tags>resources</zk:tags>
+    </url>
+
+    <!-- PEOPLE AND BLOGS INTERVIEWS -->
+
+    <url>
+        <!-- People and Blogs (index) -->
+        <zk:title>People and Blogs</zk:title>
+        <loc>https://zacharykai.net/notes/pb</loc>
+        <lastmod>2026-07-03</lastmod>
+        <zk:content>the story of Manuel Moreale's interview series, and a complete index of every conversation collected here.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,indieweb,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Manton Reece -->
+        <zk:title>People and Blogs: Manton Reece</zk:title>
+        <loc>https://zacharykai.net/notes/pb/manton</loc>
+        <lastmod>2023-09-01</lastmod>
+        <zk:content>twenty years of blogging, and the platform he built to keep it going.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Rachel J. Kwon -->
+        <zk:title>People and Blogs: Rachel J. Kwon</zk:title>
+        <loc>https://zacharykai.net/notes/pb/kwon</loc>
+        <lastmod>2023-09-08</lastmod>
+        <zk:content>blogging since the early 2000s, dead URLs and teenage cringe left behind.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Kev Quirk -->
+        <zk:title>People and Blogs: Kev Quirk</zk:title>
+        <loc>https://zacharykai.net/notes/pb/kev</loc>
+        <lastmod>2023-09-15</lastmod>
+        <zk:content>longform over hot takes, from one of Fosstodon's founders.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Brian Koberlein -->
+        <zk:title>People and Blogs: Brian Koberlein</zk:title>
+        <loc>https://zacharykai.net/notes/pb/brian</loc>
+        <lastmod>2023-09-22</lastmod>
+        <zk:content>a scientist's web pages — most lost to entropy, one that stuck.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Toby Shorin -->
+        <zk:title>People and Blogs: Toby Shorin</zk:title>
+        <loc>https://zacharykai.net/notes/pb/toby</loc>
+        <lastmod>2023-09-29</lastmod>
+        <zk:content>deepening design discourse from the sub-pixel up.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Andrea Contino -->
+        <zk:title>People and Blogs: Andrea Contino</zk:title>
+        <loc>https://zacharykai.net/notes/pb/andrea</loc>
+        <lastmod>2023-10-06</lastmod>
+        <zk:content>from a 2007 FIFA press trip to a blog that stuck.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ana Rodrigues -->
+        <zk:title>People and Blogs: Ana Rodrigues</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ana</loc>
+        <lastmod>2023-10-13</lastmod>
+        <zk:content>travel notes that grew into something personal, and why the name changed.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jim Nielsen -->
+        <zk:title>People and Blogs: Jim Nielsen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jim</loc>
+        <lastmod>2023-10-20</lastmod>
+        <zk:content>from Photoshop shitposts to two decades of web writing.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ray Thomas -->
+        <zk:title>People and Blogs: Ray Thomas</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ray</loc>
+        <lastmod>2023-10-27</lastmod>
+        <zk:content>a sailor father's photo albums, scanned and given a home online.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jamie Crisman -->
+        <zk:title>People and Blogs: Jamie Crisman</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jamie</loc>
+        <lastmod>2023-11-03</lastmod>
+        <zk:content>rebuilding the blog from scratch to learn each new language.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Piper Haywood -->
+        <zk:title>People and Blogs: Piper Haywood</zk:title>
+        <loc>https://zacharykai.net/notes/pb/piper</loc>
+        <lastmod>2023-11-10</lastmod>
+        <zk:content>test content for a Tumblr theme that became a decade of recording.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Chris Coyier -->
+        <zk:title>People and Blogs: Chris Coyier</zk:title>
+        <loc>https://zacharykai.net/notes/pb/chris</loc>
+        <lastmod>2023-11-17</lastmod>
+        <zk:content>the plain obviousness that everyone should have a personal website.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Robin Rendle -->
+        <zk:title>People and Blogs: Robin Rendle</zk:title>
+        <loc>https://zacharykai.net/notes/pb/robin</loc>
+        <lastmod>2023-11-24</lastmod>
+        <zk:content>on the liberation of owning the writing, the design, the domain.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nicolas Magand -->
+        <zk:title>People and Blogs: Nicolas Magand</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nicolas</loc>
+        <lastmod>2023-12-01</lastmod>
+        <zk:content>ten years, many platforms, and a switch from French to English.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Eli Mellen -->
+        <zk:title>People and Blogs: Eli Mellen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/eli</loc>
+        <lastmod>2023-12-08</lastmod>
+        <zk:content>writing online for good and ill, as long as he's been online.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jamie Thingelstad -->
+        <zk:title>People and Blogs: Jamie Thingelstad</zk:title>
+        <loc>https://zacharykai.net/notes/pb/thingelstad</loc>
+        <lastmod>2023-12-15</lastmod>
+        <zk:content>a domain registered in 1999, and a blog that grew into it.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Chris Butler -->
+        <zk:title>People and Blogs: Chris Butler</zk:title>
+        <loc>https://zacharykai.net/notes/pb/butler</loc>
+        <lastmod>2023-12-22</lastmod>
+        <zk:content>the lifelong urge to keep a record of some kind.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Derek Sivers -->
+        <zk:title>People and Blogs: Derek Sivers</zk:title>
+        <loc>https://zacharykai.net/notes/pb/derek</loc>
+        <lastmod>2023-12-29</lastmod>
+        <zk:content>after selling CD Baby, a new place to share his thoughts.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Arun Venkatesan -->
+        <zk:title>People and Blogs: Arun Venkatesan</zk:title>
+        <loc>https://zacharykai.net/notes/pb/arun</loc>
+        <lastmod>2024-01-05</lastmod>
+        <zk:content>on how every blog could be vastly different, unlike a book.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Rachel Smith -->
+        <zk:title>People and Blogs: Rachel Smith</zk:title>
+        <loc>https://zacharykai.net/notes/pb/rachel</loc>
+        <lastmod>2024-01-12</lastmod>
+        <zk:content>the seventh attempt at a blog, and the one that lasted.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Tom MacWright -->
+        <zk:title>People and Blogs: Tom MacWright</zk:title>
+        <loc>https://zacharykai.net/notes/pb/tom</loc>
+        <lastmod>2024-01-19</lastmod>
+        <zk:content>writing online since 2010, in the footsteps of the blogs he loved.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ran Prieur -->
+        <zk:title>People and Blogs: Ran Prieur</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ran</loc>
+        <lastmod>2024-01-26</lastmod>
+        <zk:content>from photocopied zines to a column that outlasted them all.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Winnie Lim -->
+        <zk:title>People and Blogs: Winnie Lim</zk:title>
+        <loc>https://zacharykai.net/notes/pb/winnie</loc>
+        <lastmod>2024-02-02</lastmod>
+        <zk:content>from a Geocities page at fifteen to a quietly enduring blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Phil Gyford -->
+        <zk:title>People and Blogs: Phil Gyford</zk:title>
+        <loc>https://zacharykai.net/notes/pb/phil</loc>
+        <lastmod>2024-02-09</lastmod>
+        <zk:content>a personal site since 1995, and the SXSW trip that made it a blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Peter Rukavina -->
+        <zk:title>People and Blogs: Peter Rukavina</zk:title>
+        <loc>https://zacharykai.net/notes/pb/peter</loc>
+        <lastmod>2024-02-16</lastmod>
+        <zk:content>catching himself in about-page clichés, and writing his way out.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Herman Martinus -->
+        <zk:title>People and Blogs: Herman Martinus</zk:title>
+        <loc>https://zacharykai.net/notes/pb/herman</loc>
+        <lastmod>2024-02-23</lastmod>
+        <zk:content>a writer who built Bear Blog to keep the words simple.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Cassidy Williams -->
+        <zk:title>People and Blogs: Cassidy Williams</zk:title>
+        <loc>https://zacharykai.net/notes/pb/cassidy</loc>
+        <lastmod>2024-03-01</lastmod>
+        <zk:content>nearly twenty years of writing down everything she learns.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Brad Barrish -->
+        <zk:title>People and Blogs: Brad Barrish</zk:title>
+        <loc>https://zacharykai.net/notes/pb/brad</loc>
+        <lastmod>2024-03-08</lastmod>
+        <zk:content>from a 2001 blog to a music site that found its people.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Sara Joy -->
+        <zk:title>People and Blogs: Sara Joy</zk:title>
+        <loc>https://zacharykai.net/notes/pb/sara</loc>
+        <lastmod>2024-03-15</lastmod>
+        <zk:content>she'll just keep typing — about herself, since 1999.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Taylor Troesh -->
+        <zk:title>People and Blogs: Taylor Troesh</zk:title>
+        <loc>https://zacharykai.net/notes/pb/taylor</loc>
+        <lastmod>2024-03-22</lastmod>
+        <zk:content>digital notebooks online, born from a fudged resume.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Adrianna Tan -->
+        <zk:title>People and Blogs: Adrianna Tan</zk:title>
+        <loc>https://zacharykai.net/notes/pb/adrianna</loc>
+        <lastmod>2024-03-29</lastmod>
+        <zk:content>for the introvert who would always rather write than speak.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Matt Stein -->
+        <zk:title>People and Blogs: Matt Stein</zk:title>
+        <loc>https://zacharykai.net/notes/pb/matt</loc>
+        <lastmod>2024-04-05</lastmod>
+        <zk:content>the Matt Stein who got to mattstein.com first.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Tracy Durnell -->
+        <zk:title>People and Blogs: Tracy Durnell</zk:title>
+        <loc>https://zacharykai.net/notes/pb/tracy</loc>
+        <lastmod>2024-04-12</lastmod>
+        <zk:content>a digital garden that makes room for the incomplete.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Simone Silvestroni -->
+        <zk:title>People and Blogs: Simone Silvestroni</zk:title>
+        <loc>https://zacharykai.net/notes/pb/simone</loc>
+        <lastmod>2024-04-19</lastmod>
+        <zk:content>a blog born from grief, and the writing that helped him through.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Veronique -->
+        <zk:title>People and Blogs: Veronique</zk:title>
+        <loc>https://zacharykai.net/notes/pb/veronique</loc>
+        <lastmod>2024-04-26</lastmod>
+        <zk:content>enchanted by the quiet corners of the web, she made her own.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Cory Dransfeldt -->
+        <zk:title>People and Blogs: Cory Dransfeldt</zk:title>
+        <loc>https://zacharykai.net/notes/pb/cory</loc>
+        <lastmod>2024-05-03</lastmod>
+        <zk:content>recovering a decade of posts and a love of the indie web.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Riccardo Mori -->
+        <zk:title>People and Blogs: Riccardo Mori</zk:title>
+        <loc>https://zacharykai.net/notes/pb/riccardo</loc>
+        <lastmod>2024-05-10</lastmod>
+        <zk:content>from Usenet and LiveJournal to a long life watching Apple.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Om Malik -->
+        <zk:title>People and Blogs: Om Malik</zk:title>
+        <loc>https://zacharykai.net/notes/pb/om</loc>
+        <lastmod>2024-05-17</lastmod>
+        <zk:content>an early believer that publishing to the network is what matters.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Rebecca Toh -->
+        <zk:title>People and Blogs: Rebecca Toh</zk:title>
+        <loc>https://zacharykai.net/notes/pb/rebecca</loc>
+        <lastmod>2024-05-24</lastmod>
+        <zk:content>hand-coding daily Geocities tables since she was thirteen.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Matthew Graybosch -->
+        <zk:title>People and Blogs: Matthew Graybosch</zk:title>
+        <loc>https://zacharykai.net/notes/pb/matthew</loc>
+        <lastmod>2024-05-31</lastmod>
+        <zk:content>a place to live online and share his fiction, since 1996.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: JF Martin -->
+        <zk:title>People and Blogs: JF Martin</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jf</loc>
+        <lastmod>2024-06-07</lastmod>
+        <zk:content>the Numeric Citizen, and a life lived in cyberspace.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jessica Nickelsen -->
+        <zk:title>People and Blogs: Jessica Nickelsen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jessica</loc>
+        <lastmod>2024-06-14</lastmod>
+        <zk:content>several blogs, some books, and the 'real' one at discombobulated.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jennifer Devastatia del Gato -->
+        <zk:title>People and Blogs: Jennifer Devastatia del Gato</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jennifer</loc>
+        <lastmod>2024-06-21</lastmod>
+        <zk:content>not a blog, not a blogger — just a refusal of the social media paradigm.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alison Wilder -->
+        <zk:title>People and Blogs: Alison Wilder</zk:title>
+        <loc>https://zacharykai.net/notes/pb/alison</loc>
+        <lastmod>2024-06-28</lastmod>
+        <zk:content>an outlet to write, and a secret hope of being a real writer.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Anton Podviaznikov -->
+        <zk:title>People and Blogs: Anton Podviaznikov</zk:title>
+        <loc>https://zacharykai.net/notes/pb/anton</loc>
+        <lastmod>2024-07-05</lastmod>
+        <zk:content>a site born from falling in love with the web itself.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Andrew Stephens -->
+        <zk:title>People and Blogs: Andrew Stephens</zk:title>
+        <loc>https://zacharykai.net/notes/pb/andrew</loc>
+        <lastmod>2024-07-12</lastmod>
+        <zk:content>contributing his own content to the web, because it seemed only fair.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Luke Harris -->
+        <zk:title>People and Blogs: Luke Harris</zk:title>
+        <loc>https://zacharykai.net/notes/pb/luke</loc>
+        <lastmod>2024-07-19</lastmod>
+        <zk:content>a spot all his own, inspired by forum signature links.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Daniel Miller -->
+        <zk:title>People and Blogs: Daniel Miller</zk:title>
+        <loc>https://zacharykai.net/notes/pb/daniel</loc>
+        <lastmod>2024-07-26</lastmod>
+        <zk:content>a public notebook, kept in the spirit of personal knowledge management.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Anne Sturdivant -->
+        <zk:title>People and Blogs: Anne Sturdivant</zk:title>
+        <loc>https://zacharykai.net/notes/pb/anne</loc>
+        <lastmod>2024-08-02</lastmod>
+        <zk:content>several blogs, a long burnout, and the way back to the web.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Georgie Cooke -->
+        <zk:title>People and Blogs: Georgie Cooke</zk:title>
+        <loc>https://zacharykai.net/notes/pb/georgie</loc>
+        <lastmod>2024-08-09</lastmod>
+        <zk:content>from a Neopets ban to a lifelong coding playground.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ploum -->
+        <zk:title>People and Blogs: Ploum</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ploum</loc>
+        <lastmod>2024-08-16</lastmod>
+        <zk:content>online since 1998, from a hand-updated journal to a popular wiki.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Robert Kingett -->
+        <zk:title>People and Blogs: Robert Kingett</zk:title>
+        <loc>https://zacharykai.net/notes/pb/robert</loc>
+        <lastmod>2024-08-24</lastmod>
+        <zk:content>an unapologetic blog that refuses to be beholden to any platform.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Marty Day -->
+        <zk:title>People and Blogs: Marty Day</zk:title>
+        <loc>https://zacharykai.net/notes/pb/marty</loc>
+        <lastmod>2024-08-30</lastmod>
+        <zk:content>a webcomic, a breakup, and a corner of the web to call his own.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Steve Ledlow -->
+        <zk:title>People and Blogs: Steve Ledlow</zk:title>
+        <loc>https://zacharykai.net/notes/pb/steve</loc>
+        <lastmod>2024-09-06</lastmod>
+        <zk:content>collapsing exhausting multiple blogs into one tangible life.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Naz Hamid -->
+        <zk:title>People and Blogs: Naz Hamid</zk:title>
+        <loc>https://zacharykai.net/notes/pb/naz</loc>
+        <lastmod>2024-09-13</lastmod>
+        <zk:content>inspired by the Blogger pioneers, online since 1999.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Giles Turnbull -->
+        <zk:title>People and Blogs: Giles Turnbull</zk:title>
+        <loc>https://zacharykai.net/notes/pb/giles</loc>
+        <lastmod>2024-09-20</lastmod>
+        <zk:content>a journalist who learned HTML to cover the web, then never stopped.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Justin Duke -->
+        <zk:title>People and Blogs: Justin Duke</zk:title>
+        <loc>https://zacharykai.net/notes/pb/justin</loc>
+        <lastmod>2024-09-27</lastmod>
+        <zk:content>a résumé-padding tech blog he unexpectedly fell for.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Xanthe Tynehorne -->
+        <zk:title>People and Blogs: Xanthe Tynehorne</zk:title>
+        <loc>https://zacharykai.net/notes/pb/xanthe</loc>
+        <lastmod>2024-10-04</lastmod>
+        <zk:content>born with the internet in her blood, at the tail end of Geocities.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Chris O'Donnell -->
+        <zk:title>People and Blogs: Chris O'Donnell</zk:title>
+        <loc>https://zacharykai.net/notes/pb/donnell</loc>
+        <lastmod>2024-10-11</lastmod>
+        <zk:content>a blog and a career, intertwined since New Year's Eve 1995.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Steyn Viljoen -->
+        <zk:title>People and Blogs: Steyn Viljoen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/steyn</loc>
+        <lastmod>2024-10-18</lastmod>
+        <zk:content>from a consciousness coach's first posts to many iterations since.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Denny Henke -->
+        <zk:title>People and Blogs: Denny Henke</zk:title>
+        <loc>https://zacharykai.net/notes/pb/denny</loc>
+        <lastmod>2024-10-25</lastmod>
+        <zk:content>a community activist's zines, carried onto the web.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Westley Winks -->
+        <zk:title>People and Blogs: Westley Winks</zk:title>
+        <loc>https://zacharykai.net/notes/pb/westley</loc>
+        <lastmod>2024-11-01</lastmod>
+        <zk:content>a blog as your brain, over time, on the internet.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Dalton Mabery -->
+        <zk:title>People and Blogs: Dalton Mabery</zk:title>
+        <loc>https://zacharykai.net/notes/pb/dalton</loc>
+        <lastmod>2024-11-08</lastmod>
+        <zk:content>writing because the people he admires in history always did.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Sara Jakša -->
+        <zk:title>People and Blogs: Sara Jakša</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jaksa</loc>
+        <lastmod>2024-11-15</lastmod>
+        <zk:content>a blog that began over coffee after a Toastmasters meeting.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Em -->
+        <zk:title>People and Blogs: Em</zk:title>
+        <loc>https://zacharykai.net/notes/pb/em</loc>
+        <lastmod>2024-11-22</lastmod>
+        <zk:content>from avid lurker to her own blog, on an unremarkable Saturday.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Lucy Bellwood -->
+        <zk:title>People and Blogs: Lucy Bellwood</zk:title>
+        <loc>https://zacharykai.net/notes/pb/lucy</loc>
+        <lastmod>2024-11-29</lastmod>
+        <zk:content>a gap-year travel blog at seventeen that's somehow still up.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Erica Fustero -->
+        <zk:title>People and Blogs: Erica Fustero</zk:title>
+        <loc>https://zacharykai.net/notes/pb/erica</loc>
+        <lastmod>2024-12-06</lastmod>
+        <zk:content>from punk-rock forums to LiveJournal, Fotolog, and beyond.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Chris DeLuca -->
+        <zk:title>People and Blogs: Chris DeLuca</zk:title>
+        <loc>https://zacharykai.net/notes/pb/deluca</loc>
+        <lastmod>2024-12-13</lastmod>
+        <zk:content>writing through a leukemia diagnosis and a crashed economy.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Zinzy -->
+        <zk:title>People and Blogs: Zinzy</zk:title>
+        <loc>https://zacharykai.net/notes/pb/zinzy</loc>
+        <lastmod>2024-12-20</lastmod>
+        <zk:content>personal websites as rooms, as homes that outlast the feed.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jatan Mehta -->
+        <zk:title>People and Blogs: Jatan Mehta</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jatan</loc>
+        <lastmod>2024-12-27</lastmod>
+        <zk:content>sharing the excitement of space, one post at a time, since seventeen.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Pauline P. Narvas -->
+        <zk:title>People and Blogs: Pauline P. Narvas</zk:title>
+        <loc>https://zacharykai.net/notes/pb/pauline</loc>
+        <lastmod>2025-01-03</lastmod>
+        <zk:content>from a RuneScape dream to a journey through tech, written down.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Steven Garrity -->
+        <zk:title>People and Blogs: Steven Garrity</zk:title>
+        <loc>https://zacharykai.net/notes/pb/steven</loc>
+        <lastmod>2025-01-10</lastmod>
+        <zk:content>Acts of Volition, started with friends in the year 2000.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Annie Mueller -->
+        <zk:title>People and Blogs: Annie Mueller</zk:title>
+        <loc>https://zacharykai.net/notes/pb/annie</loc>
+        <lastmod>2025-01-17</lastmod>
+        <zk:content>a lifelong journaler who blogged her way out of the platforms.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ava -->
+        <zk:title>People and Blogs: Ava</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ava</loc>
+        <lastmod>2025-01-24</lastmod>
+        <zk:content>documenting the tinkering — until life had other plans.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Donny Truong -->
+        <zk:title>People and Blogs: Donny Truong</zk:title>
+        <loc>https://zacharykai.net/notes/pb/donny</loc>
+        <lastmod>2025-01-31</lastmod>
+        <zk:content>blogging since 2003 to master a second language through design.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Lou Plummer -->
+        <zk:title>People and Blogs: Lou Plummer</zk:title>
+        <loc>https://zacharykai.net/notes/pb/lou</loc>
+        <lastmod>2025-02-07</lastmod>
+        <zk:content>a 90s GeoCities blog named after an obscure ballplayer.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Max Kapur -->
+        <zk:title>People and Blogs: Max Kapur</zk:title>
+        <loc>https://zacharykai.net/notes/pb/max</loc>
+        <lastmod>2025-02-14</lastmod>
+        <zk:content>a pianist's blog, started to own his own Google results.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ben Werdmuller -->
+        <zk:title>People and Blogs: Ben Werdmuller</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ben</loc>
+        <lastmod>2025-02-21</lastmod>
+        <zk:content>blogging since 1998, careening across platforms he often built himself.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Marco Giancotti -->
+        <zk:title>People and Blogs: Marco Giancotti</zk:title>
+        <loc>https://zacharykai.net/notes/pb/marco</loc>
+        <lastmod>2025-02-28</lastmod>
+        <zk:content>interdisciplinary musings from an 'undercover physics' career.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: James -->
+        <zk:title>People and Blogs: James</zk:title>
+        <loc>https://zacharykai.net/notes/pb/james</loc>
+        <lastmod>2025-03-07</lastmod>
+        <zk:content>a place to write and tinker, found alongside the IndieWeb.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Keenan -->
+        <zk:title>People and Blogs: Keenan</zk:title>
+        <loc>https://zacharykai.net/notes/pb/keenan</loc>
+        <lastmod>2025-03-14</lastmod>
+        <zk:content>a lifelong search for a little place that's perfectly him.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ben Borgers -->
+        <zk:title>People and Blogs: Ben Borgers</zk:title>
+        <loc>https://zacharykai.net/notes/pb/borgers</loc>
+        <lastmod>2025-03-21</lastmod>
+        <zk:content>high-school programming posts that quietly found an audience.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Maya -->
+        <zk:title>People and Blogs: Maya</zk:title>
+        <loc>https://zacharykai.net/notes/pb/maya</loc>
+        <lastmod>2025-03-28</lastmod>
+        <zk:content>an eavesdropper's notebook, for the worlds moving parallel to ours.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Matt Webb -->
+        <zk:title>People and Blogs: Matt Webb</zk:title>
+        <loc>https://zacharykai.net/notes/pb/webb</loc>
+        <lastmod>2025-04-04</lastmod>
+        <zk:content>blogging since 2000, back when he was building web toys like Dirk.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jedda -->
+        <zk:title>People and Blogs: Jedda</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jedda</loc>
+        <lastmod>2025-04-11</lastmod>
+        <zk:content>an angsty teenager's words, carried across a dozen platforms.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jeremy Keith -->
+        <zk:title>People and Blogs: Jeremy Keith</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jeremy</loc>
+        <lastmod>2025-04-18</lastmod>
+        <zk:content>from band sites in 1990s Germany to a cornerstone of the IndieWeb.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Frills -->
+        <zk:title>People and Blogs: Frills</zk:title>
+        <loc>https://zacharykai.net/notes/pb/frills</loc>
+        <lastmod>2025-04-25</lastmod>
+        <zk:content>pulled into the IndieWeb by sprawling links upon links.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alexandra Deschamps-Sonsino -->
+        <zk:title>People and Blogs: Alexandra Deschamps-Sonsino</zk:title>
+        <loc>https://zacharykai.net/notes/pb/sonsino</loc>
+        <lastmod>2025-05-02</lastmod>
+        <zk:content>a designer who hated PHP and kept blogging anyway, since 2005.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Anh -->
+        <zk:title>People and Blogs: Anh</zk:title>
+        <loc>https://zacharykai.net/notes/pb/anh</loc>
+        <lastmod>2025-05-09</lastmod>
+        <zk:content>a shy nerd's comfortable drift toward oversharing online.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Watts Martin -->
+        <zk:title>People and Blogs: Watts Martin</zk:title>
+        <loc>https://zacharykai.net/notes/pb/watts</loc>
+        <lastmod>2025-05-16</lastmod>
+        <zk:content>Coyote Tracks — musings on tech, an absurdly long time in the making.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Seth Werkheiser -->
+        <zk:title>People and Blogs: Seth Werkheiser</zk:title>
+        <loc>https://zacharykai.net/notes/pb/seth</loc>
+        <lastmod>2025-05-23</lastmod>
+        <zk:content>back to blogging in 2018, salvaging old words from the Wayback Machine.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Sebastián Monía -->
+        <zk:title>People and Blogs: Sebastián Monía</zk:title>
+        <loc>https://zacharykai.net/notes/pb/sebastian</loc>
+        <lastmod>2025-05-30</lastmod>
+        <zk:content>finally blogging, after years of thinking it was for the more qualified.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Benji -->
+        <zk:title>People and Blogs: Benji</zk:title>
+        <loc>https://zacharykai.net/notes/pb/benji</loc>
+        <lastmod>2025-06-06</lastmod>
+        <zk:content>past a graveyard of abandoned project blogs, one that stays.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: James A. Reeves -->
+        <zk:title>People and Blogs: James A. Reeves</zk:title>
+        <loc>https://zacharykai.net/notes/pb/reeves</loc>
+        <lastmod>2025-06-13</lastmod>
+        <zk:content>from Big American Night to crisscrossing a paranoid America.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Dave Rupert -->
+        <zk:title>People and Blogs: Dave Rupert</zk:title>
+        <loc>https://zacharykai.net/notes/pb/dave</loc>
+        <lastmod>2025-06-20</lastmod>
+        <zk:content>the third incarnation of a blog that began as a high-school zine.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: David Wertheimer -->
+        <zk:title>People and Blogs: David Wertheimer</zk:title>
+        <loc>https://zacharykai.net/notes/pb/david</loc>
+        <lastmod>2025-06-27</lastmod>
+        <zk:content>a personal page from 1996, when the web reinvented itself monthly.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nick Simson -->
+        <zk:title>People and Blogs: Nick Simson</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nick</loc>
+        <lastmod>2025-07-04</lastmod>
+        <zk:content>a design-portfolio requirement that turned into a lasting site.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: BSAG -->
+        <zk:title>People and Blogs: BSAG</zk:title>
+        <loc>https://zacharykai.net/notes/pb/bsag</loc>
+        <lastmod>2025-07-11</lastmod>
+        <zk:content>a technically-minded weblog, kept since the 'weblog' days of 2002.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alex Sirac -->
+        <zk:title>People and Blogs: Alex Sirac</zk:title>
+        <loc>https://zacharykai.net/notes/pb/alex</loc>
+        <lastmod>2025-07-18</lastmod>
+        <zk:content>from a butterfly-strewn French pre-teen blog to now.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Marisabel Munoz -->
+        <zk:title>People and Blogs: Marisabel Munoz</zk:title>
+        <loc>https://zacharykai.net/notes/pb/marisabel</loc>
+        <lastmod>2025-07-25</lastmod>
+        <zk:content>a Java-learning log that grew right alongside her career.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Emma Goto -->
+        <zk:title>People and Blogs: Emma Goto</zk:title>
+        <loc>https://zacharykai.net/notes/pb/emma</loc>
+        <lastmod>2025-08-01</lastmod>
+        <zk:content>writing her way into confidence as a programmer.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alexandra -->
+        <zk:title>People and Blogs: Alexandra</zk:title>
+        <loc>https://zacharykai.net/notes/pb/alexandra</loc>
+        <lastmod>2025-08-08</lastmod>
+        <zk:content>the library of alexandra, where she rambles as long as she likes.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Loren Stephens -->
+        <zk:title>People and Blogs: Loren Stephens</zk:title>
+        <loc>https://zacharykai.net/notes/pb/loren</loc>
+        <lastmod>2025-08-15</lastmod>
+        <zk:content>several blogs, and the one that stuck after switching to Apple.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Tom Critchlow -->
+        <zk:title>People and Blogs: Tom Critchlow</zk:title>
+        <loc>https://zacharykai.net/notes/pb/critchlow</loc>
+        <lastmod>2025-08-22</lastmod>
+        <zk:content>from teenage Elfwood poetry and poker forums to writing on his own terms.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Courtney -->
+        <zk:title>People and Blogs: Courtney</zk:title>
+        <loc>https://zacharykai.net/notes/pb/courtney</loc>
+        <lastmod>2025-08-29</lastmod>
+        <zk:content>a decades-long discomfort with the word 'blog'.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Louie Mantia -->
+        <zk:title>People and Blogs: Louie Mantia</zk:title>
+        <loc>https://zacharykai.net/notes/pb/louie</loc>
+        <lastmod>2025-09-05</lastmod>
+        <zk:content>a fifteen-year-old's PHP-powered site, proudly his own.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Jack Baty -->
+        <zk:title>People and Blogs: Jack Baty</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jack</loc>
+        <lastmod>2025-09-12</lastmod>
+        <zk:content>which blog? the late-90s habit he could never quit.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Robert Birming -->
+        <zk:title>People and Blogs: Robert Birming</zk:title>
+        <loc>https://zacharykai.net/notes/pb/birming</loc>
+        <lastmod>2025-09-19</lastmod>
+        <zk:content>blogging since 2002, from a blog once called 'Smidigt'.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Kris Howard -->
+        <zk:title>People and Blogs: Kris Howard</zk:title>
+        <loc>https://zacharykai.net/notes/pb/kris</loc>
+        <lastmod>2025-09-26</lastmod>
+        <zk:content>from a dreaded dining-hall job to learning HTML and never stopping.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Blake Watson -->
+        <zk:title>People and Blogs: Blake Watson</zk:title>
+        <loc>https://zacharykai.net/notes/pb/blake</loc>
+        <lastmod>2025-10-03</lastmod>
+        <zk:content>hooked on making websites since a high-school sports site.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Linda Ma -->
+        <zk:title>People and Blogs: Linda Ma</zk:title>
+        <loc>https://zacharykai.net/notes/pb/linda</loc>
+        <lastmod>2025-10-10</lastmod>
+        <zk:content>on the sudden, surprising need to write in public.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alice -->
+        <zk:title>People and Blogs: Alice</zk:title>
+        <loc>https://zacharykai.net/notes/pb/alice</loc>
+        <lastmod>2025-10-17</lastmod>
+        <zk:content>The Wallflower Digest, born from boredom and a need for a goal.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Romina Malta -->
+        <zk:title>People and Blogs: Romina Malta</zk:title>
+        <loc>https://zacharykai.net/notes/pb/romina</loc>
+        <lastmod>2025-10-24</lastmod>
+        <zk:content>a slower space to think through writing, always in progress.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Frank Chimero -->
+        <zk:title>People and Blogs: Frank Chimero</zk:title>
+        <loc>https://zacharykai.net/notes/pb/frank</loc>
+        <lastmod>2025-10-31</lastmod>
+        <zk:content>a designer-teacher thinking out loud about his craft.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Robb Knight -->
+        <zk:title>People and Blogs: Robb Knight</zk:title>
+        <loc>https://zacharykai.net/notes/pb/robb</loc>
+        <lastmod>2025-11-07</lastmod>
+        <zk:content>after a graveyard of abandoned blogs, the one that finally stuck.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nic Chan -->
+        <zk:title>People and Blogs: Nic Chan</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nic</loc>
+        <lastmod>2025-11-14</lastmod>
+        <zk:content>blogging to prove a freelancer is a real, trustworthy person.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Alexandra Wolfe -->
+        <zk:title>People and Blogs: Alexandra Wolfe</zk:title>
+        <loc>https://zacharykai.net/notes/pb/wolfe</loc>
+        <lastmod>2025-11-21</lastmod>
+        <zk:content>stumbling from MySpace into hand-built HTML, like everyone did.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Karen -->
+        <zk:title>People and Blogs: Karen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/karen</loc>
+        <lastmod>2025-11-28</lastmod>
+        <zk:content>blogging since the 'weblog' and 'online journal' days of 2001.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Stephanie Stimac -->
+        <zk:title>People and Blogs: Stephanie Stimac</zk:title>
+        <loc>https://zacharykai.net/notes/pb/stephanie</loc>
+        <lastmod>2025-12-05</lastmod>
+        <zk:content>from a high-school LiveJournal to writing about the web itself.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nick Heer -->
+        <zk:title>People and Blogs: Nick Heer</zk:title>
+        <loc>https://zacharykai.net/notes/pb/heer</loc>
+        <lastmod>2025-12-12</lastmod>
+        <zk:content>Pixel Envy, stripped to text so the focus could be the writing.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Kathleen Fisher -->
+        <zk:title>People and Blogs: Kathleen Fisher</zk:title>
+        <loc>https://zacharykai.net/notes/pb/kathleen</loc>
+        <lastmod>2025-12-19</lastmod>
+        <zk:content>an annual Christmas-card spoof that turned into a love of writing.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Lars-Christian Simonsen -->
+        <zk:title>People and Blogs: Lars-Christian Simonsen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/lars</loc>
+        <lastmod>2025-12-26</lastmod>
+        <zk:content>hooked at a Norwegian internet café in 1995, and online ever since.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: V.H. Belvadi -->
+        <zk:title>People and Blogs: V.H. Belvadi</zk:title>
+        <loc>https://zacharykai.net/notes/pb/belvadi</loc>
+        <lastmod>2026-01-02</lastmod>
+        <zk:content>from a magazine explainer to hand-coded pages and a lasting blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Bix Frankonis -->
+        <zk:title>People and Blogs: Bix Frankonis</zk:title>
+        <loc>https://zacharykai.net/notes/pb/bix</loc>
+        <lastmod>2026-01-09</lastmod>
+        <zk:content>a modern blogging era reclaimed, one bix.blog post at a time.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Yancey Strickler -->
+        <zk:title>People and Blogs: Yancey Strickler</zk:title>
+        <loc>https://zacharykai.net/notes/pb/yancey</loc>
+        <lastmod>2026-01-16</lastmod>
+        <zk:content>a music journalist with more opinions than places to print them.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Ryan -->
+        <zk:title>People and Blogs: Ryan</zk:title>
+        <loc>https://zacharykai.net/notes/pb/ryan</loc>
+        <lastmod>2026-01-23</lastmod>
+        <zk:content>online since 1994 — only the second student on his college's server.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nikita Prokopov -->
+        <zk:title>People and Blogs: Nikita Prokopov</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nikita</loc>
+        <lastmod>2026-01-30</lastmod>
+        <zk:content>from heated LiveJournal debates to writing under his own name.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Frances -->
+        <zk:title>People and Blogs: Frances</zk:title>
+        <loc>https://zacharykai.net/notes/pb/frances</loc>
+        <lastmod>2026-02-06</lastmod>
+        <zk:content>a fresh burst of indie-web enthusiasm, decades after Geocities.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: David Cain -->
+        <zk:title>People and Blogs: David Cain</zk:title>
+        <loc>https://zacharykai.net/notes/pb/cain</loc>
+        <lastmod>2026-02-13</lastmod>
+        <zk:content>Raptitude — a blog about getting better at being human.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Stefano Verna -->
+        <zk:title>People and Blogs: Stefano Verna</zk:title>
+        <loc>https://zacharykai.net/notes/pb/stefano</loc>
+        <lastmod>2026-02-20</lastmod>
+        <zk:content>a Blogger-era blog where he even met his future wife.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Dominik Schwind -->
+        <zk:title>People and Blogs: Dominik Schwind</zk:title>
+        <loc>https://zacharykai.net/notes/pb/dominik</loc>
+        <lastmod>2026-02-27</lastmod>
+        <zk:content>learning HTML from a game manual, before he even had the internet.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Eric Schwarz -->
+        <zk:title>People and Blogs: Eric Schwarz</zk:title>
+        <loc>https://zacharykai.net/notes/pb/eric</loc>
+        <lastmod>2026-03-06</lastmod>
+        <zk:content>a software 'business' name from his TRS-80 days, reborn as a blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Patrick Rhone -->
+        <zk:title>People and Blogs: Patrick Rhone</zk:title>
+        <loc>https://zacharykai.net/notes/pb/patrick</loc>
+        <lastmod>2026-03-13</lastmod>
+        <zk:content>Rhoneisms — kept since 2003, with roots reaching back even further.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Melanie Richards -->
+        <zk:title>People and Blogs: Melanie Richards</zk:title>
+        <loc>https://zacharykai.net/notes/pb/melanie</loc>
+        <lastmod>2026-03-20</lastmod>
+        <zk:content>on the web, design, and a years-long monthly Learning Log.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nikhil Anand -->
+        <zk:title>People and Blogs: Nikhil Anand</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nikhil</loc>
+        <lastmod>2026-03-27</lastmod>
+        <zk:content>blogging since 2003, in the lineage of Kottke and Zeldman.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Anthony Nelzin-Santos -->
+        <zk:title>People and Blogs: Anthony Nelzin-Santos</zk:title>
+        <loc>https://zacharykai.net/notes/pb/anthony</loc>
+        <lastmod>2026-04-03</lastmod>
+        <zk:content>growing up at the dawn of the web, before anyone knew its shape.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Frank Meeuwsen -->
+        <zk:title>People and Blogs: Frank Meeuwsen</zk:title>
+        <loc>https://zacharykai.net/notes/pb/meeuwsen</loc>
+        <lastmod>2026-04-10</lastmod>
+        <zk:content>the orange button in 2000 that first introduced him to blogs.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: JTR -->
+        <zk:title>People and Blogs: JTR</zk:title>
+        <loc>https://zacharykai.net/notes/pb/jtr</loc>
+        <lastmod>2026-04-17</lastmod>
+        <zk:content>a quest to learn technology, recorded one note at a time.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nicolas Solerieu -->
+        <zk:title>People and Blogs: Nicolas Solerieu</zk:title>
+        <loc>https://zacharykai.net/notes/pb/solerieu</loc>
+        <lastmod>2026-04-24</lastmod>
+        <zk:content>a domain of vowel-less initials, and a wish to stay a little hidden.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Hyde Stevenson -->
+        <zk:title>People and Blogs: Hyde Stevenson</zk:title>
+        <loc>https://zacharykai.net/notes/pb/hyde</loc>
+        <lastmod>2026-05-01</lastmod>
+        <zk:content>from Debian how-tos in 2001 to a long life writing online.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Nicola Losito -->
+        <zk:title>People and Blogs: Nicola Losito</zk:title>
+        <loc>https://zacharykai.net/notes/pb/nicola</loc>
+        <lastmod>2026-05-08</lastmod>
+        <zk:content>an early Italian blogger, posting since Splinder in 2003.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: RMF -->
+        <zk:title>People and Blogs: RMF</zk:title>
+        <loc>https://zacharykai.net/notes/pb/rmf</loc>
+        <lastmod>2026-05-15</lastmod>
+        <zk:content>an update box that grew rantier until it became a blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Piri -->
+        <zk:title>People and Blogs: Piri</zk:title>
+        <loc>https://zacharykai.net/notes/pb/piri</loc>
+        <lastmod>2026-05-22</lastmod>
+        <zk:content>a designer who can't remember a time without a blog.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Carl Barenbrug -->
+        <zk:title>People and Blogs: Carl Barenbrug</zk:title>
+        <loc>https://zacharykai.net/notes/pb/carl</loc>
+        <lastmod>2026-06-12</lastmod>
+        <zk:content>design curation in 2011, thinking in public since 2020.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Edoardo -->
+        <zk:title>People and Blogs: Edoardo</zk:title>
+        <loc>https://zacharykai.net/notes/pb/edoardo</loc>
+        <lastmod>2026-06-19</lastmod>
+        <zk:content>a physicist's plain-text personal journal, written for curiosity's sake.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Anne Lee Steele -->
+        <zk:title>People and Blogs: Anne Lee Steele</zk:title>
+        <loc>https://zacharykai.net/notes/pb/steele</loc>
+        <lastmod>2026-06-26</lastmod>
+        <zk:content>a researcher, facilitator, and artist writing field notes from her own desktop.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Andy Baio -->
+        <zk:title>People and Blogs: Andy Baio</zk:title>
+        <loc>https://zacharykai.net/notes/pb/andy</loc>
+        <lastmod>2026-07-03</lastmod>
+        <zk:content>25 years of Waxy.org, running XOXO for over a decade, and coining the term "supercut".</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Zachary Kai -->
+        <zk:title>People and Blogs: Zachary Kai</zk:title>
+        <loc>https://zacharykai.net/notes/pb/zachary</loc>
+        <lastmod>2026-07-10</lastmod>
+        <zk:content>the last guest of Manu's cycle and the series' new steward, on words, the indie web, and hand-typed HTML.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Brennan Kenneth Brown -->
+        <zk:title>People and Blogs: Brennan Kenneth Brown</zk:title>
+        <loc>https://zacharykai.net/notes/pb/brennan</loc>
+        <lastmod>2026-07-17</lastmod>
+        <zk:content>a Queer Red River Métis writer and web developer making a living blogging near-daily, on Eleventy, the IndieWeb, and owning your corner of the web.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Andy -->
+        <zk:title>People and Blogs: Andy</zk:title>
+        <loc>https://zacharykai.net/notes/pb/workshopshed</loc>
+        <lastmod>2026-07-24</lastmod>
+        <zk:content>making and repairing everything from furniture to electromechanical contraptions in a shed at the bottom of the garden, on WordPress, constraints, and blogging the build.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Eetu -->
+        <zk:title>People and Blogs: Eetu</zk:title>
+        <loc>https://zacharykai.net/notes/pb/eetu</loc>
+        <lastmod>2026-07-31</lastmod>
+        <zk:content>writer of moonwriting, personal essays on technology, privacy, and blogging, on iA Writer, Pagecord, and finding the IndieWeb.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+    <url>
+        <!-- People and Blogs: Christian -->
+        <zk:title>People and Blogs: Christian</zk:title>
+        <loc>https://zacharykai.net/notes/pb/christian</loc>
+        <lastmod>2026-08-07</lastmod>
+        <zk:content>IT Audit Manager and privacy/self-hosting enthusiast writing at cleberg.net, on Org mode, Weblorg, and building a blog on plain text and source control.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
+</urlset>

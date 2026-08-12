@@ -1,0 +1,34 @@
+# Folders
+
+.vscode/
+assets/
+art/
+catalog/
+events/
+jots/
+lab/
+gratitudes/
+links/
+notes/lit
+notes/rlr
+notes/sol
+notes/ss
+offerings/
+photos/
+tools/
+
+## Files
+
+400.html
+401.html
+403.html
+404.html
+500.html
+502.html
+503.html
+
+lists/starwars.php
+lists/vintagecars.php
+
+random.php
+search.php

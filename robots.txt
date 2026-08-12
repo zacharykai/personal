@@ -1,0 +1,63 @@
+# --- Essentials
+
+Content-signal: search=yes,ai-train=yes,ai-input=yes
+Sitemap: https://zacharykai.net/sitemap.xml
+
+# --- Allows
+
+User-agent: *
+Allow: /
+
+# --- Disallows
+
+# Crawlers
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ChatGLM-Spider
+Disallow: /
+
+User-agent: DeepSeekBot
+Disallow: /
+
+User-agent: iAskBot
+Disallow: /
+
+User-agent: iaskspider
+Disallow: /
+
+User-agent: iaskspider/2.0
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: TikTokSpider
+Disallow: /
+
+# Folders
+
+Disallow: /assets/
+Disallow: /jots/
+
+# Files
+
+Disallow: /.gitignore
+Disallow: /400
+Disallow: /401
+Disallow: /403
+Disallow: /500
+Disallow: /502
+Disallow: /503
+Disallow: /humans.txt
+Disallow: /LICENSE
+Disallow: /random
+Disallow: /README.md
+Disallow: /search
+Disallow: /successful
+Disallow: /tags
+
