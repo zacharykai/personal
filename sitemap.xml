@@ -3642,4 +3642,15 @@
         <zk:tags>interviews,blogging</zk:tags>
     </url>
 
+    <url>
+        <!-- People and Blogs: Rusty -->
+        <zk:title>People and Blogs: Rusty</zk:title>
+        <loc>https://zacharykai.net/notes/pb/rusty</loc>
+        <lastmod>2026-08-14</lastmod>
+        <zk:content>software engineer and adjunct anthropology professor writing at Alien Induction, on burning out on niche blogs and hand-building a LAMP stack from scratch.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
 </urlset>
