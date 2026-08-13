@@ -1,6 +1,9 @@
 # Folders
 
 .vscode/
+.well-known/
+auth/
+micropub/
 assets/
 art/
 catalog/
@@ -16,9 +19,12 @@ notes/ss
 offerings/
 photos/
 tools/
+vendor/
 
 ## Files
 
+composer.json
+composer.lock
 400.html
 401.html
 403.html
