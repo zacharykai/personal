@@ -169,8 +169,20 @@
         <!-- Colophon -->
         <zk:title>Colophon</zk:title>
         <loc>https://zacharykai.net/colophon</loc>
-        <lastmod>2025-12-17</lastmod>
+        <lastmod>2026-08-17</lastmod>
         <zk:content>more on this site, internet principles, numbers, and esoterica.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>about_site</zk:subsubcategory>
+        <zk:tags>indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Credits -->
+        <zk:title>Credits</zk:title>
+        <loc>https://zacharykai.net/credits</loc>
+        <lastmod>2026-08-17</lastmod>
+        <zk:content>the people, sites, and principles that have inspired this one.</zk:content>
         <zk:category>pages</zk:category>
         <zk:subcategory>site_info</zk:subcategory>
         <zk:subsubcategory>about_site</zk:subsubcategory>
@@ -720,6 +732,17 @@
     </url>
 
     <url>
+        <!-- Someday -->
+        <zk:title>Someday</zk:title>
+        <loc>https://zacharykai.net/someday</loc>
+        <lastmod>2026-08-16</lastmod>
+        <zk:content>a growing list of experiences I'd like to have, without deadlines.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal,travel,film</zk:tags>
+    </url>
+
+    <url>
         <!-- Traditional -->
         <zk:title>Traditional</zk:title>
         <loc>https://zacharykai.net/art/traditional</loc>
@@ -867,6 +890,17 @@
         <zk:category>pages</zk:category>
         <zk:subcategory>collections</zk:subcategory>
         <zk:tags>indieweb,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Title Trades -->
+        <zk:title>Title Trades</zk:title>
+        <loc>https://zacharykai.net/collections/titletrades</loc>
+        <lastmod>2026-08-22</lastmod>
+        <zk:content>every blog post title trade I've done: swapping a post title with someone else and each writing to the other's prompt.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>community,writing</zk:tags>
     </url>
 
     <!-- LISTS -->
@@ -1036,6 +1070,17 @@
         <zk:category>notes</zk:category>
         <zk:subcategory>collaborative</zk:subcategory>
         <zk:tags>creative,community</zk:tags>
+    </url>
+
+    <url>
+        <!-- Tend To The Small Things -->
+        <zk:title>Tend To The Small Things</zk:title>
+        <loc>https://zacharykai.net/notes/tend</loc>
+        <lastmod>2026-08-22</lastmod>
+        <zk:content>on procrastination, the experiencing self vs. the remembering self, and knowing the big things before you can tend to the small ones.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>trades</zk:subcategory>
+        <zk:tags>personal,reflection,trades</zk:tags>
     </url>
 
     <url>
@@ -1619,6 +1664,17 @@
         <zk:category>notes</zk:category>
         <zk:subcategory>announcements</zk:subcategory>
         <zk:tags>indieweb,community,html,events</zk:tags>
+    </url>
+
+    <url>
+        <!-- What Everyone Should Know About Australia -->
+        <zk:title>What Everyone Should Know About Australia</zk:title>
+        <loc>https://zacharykai.net/notes/australia</loc>
+        <lastmod>2026-08-20</lastmod>
+        <zk:content>an Australian's answers to the questions Americans keep asking: no, it won't all kill you, the food's worth the trip, and there's far more here than red dust.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>reflections</zk:subcategory>
+        <zk:tags>travel,australia,food,culture</zk:tags>
     </url>
 
     <url>
