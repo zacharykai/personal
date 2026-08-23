@@ -39,5 +39,6 @@ composer.lock
 lists/starwars.php
 lists/vintagecars.php
 
+deploy.php
 random.php
 search.php
