@@ -282,6 +282,18 @@
     </url>
 
     <url>
+        <!-- Friends -->
+        <zk:title>Friends</zk:title>
+        <loc>https://zacharykai.net/friends</loc>
+        <lastmod>2026-08-28</lastmod>
+        <zk:content>folks who I consider friends on the interwebs.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>site_info</zk:subcategory>
+        <zk:subsubcategory>community</zk:subsubcategory>
+        <zk:tags>community</zk:tags>
+    </url>
+
+    <url>
         <!-- Favorites -->
         <zk:title>Favorites</zk:title>
         <loc>https://zacharykai.net/favorites</loc>
