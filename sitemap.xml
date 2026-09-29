@@ -3721,4 +3721,15 @@
         <zk:tags>interviews,blogging</zk:tags>
     </url>
 
+    <url>
+        <!-- People and Blogs: Juhis -->
+        <zk:title>People and Blogs: Juhis</zk:title>
+        <loc>https://zacharykai.net/notes/pb/juhis</loc>
+        <lastmod>2026-09-04</lastmod>
+        <zk:content>Finnish community builder, writer, and developer at hamatti.org, on weekly blogging, writing from accumulated notes, and a Notion-to-Eleventy publishing workflow.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>interviews</zk:subcategory>
+        <zk:tags>interviews,blogging</zk:tags>
+    </url>
+
 </urlset>
