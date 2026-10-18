@@ -1722,6 +1722,17 @@
         <zk:tags>creative,reflection,blogging,community</zk:tags>
     </url>
 
+    <url>
+        <!-- Food Questions Challenge -->
+        <zk:title>Food Questions Challenge</zk:title>
+        <loc>https://zacharykai.net/notes/foodqna</loc>
+        <lastmod>2026-10-18</lastmod>
+        <zk:content>my answers to James's food questions blogging challenge: childhood favorites, Australian specialties, foods I'd love to try, and why I don't drink tea or coffee.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>food,personal</zk:tags>
+    </url>
+
     <!-- OFFERINGS -->
 
     <url>
