@@ -149,13 +149,25 @@ function split_draft(string $text): array {
     return [explode("\n", $m[1]), $m[2]];
 }
 
+/** Strips one pair of matching YAML quotes, unescaping as YAML does. */
+function unquote(string $v): string {
+    $v = trim($v);
+    if (strlen($v) >= 2 && $v[0] === '"' && str_ends_with($v, '"')) {
+        return stripcslashes(substr($v, 1, -1));
+    }
+    if (strlen($v) >= 2 && $v[0] === "'" && str_ends_with($v, "'")) {
+        return str_replace("''", "'", substr($v, 1, -1));
+    }
+    return $v;
+}
+
 /** Parses the simple YAML Obsidian writes: scalars, inline [lists] and "- item" lists. */
 function parse_frontmatter(array $lines): array {
     $fields = [];
     $key = null;
     foreach ($lines as $line) {
         if (preg_match('/^\s+-\s*(.*)$/', $line, $m) && $key !== null) {
-            $fields[$key][] = trim($m[1], " \t\"'");
+            $fields[$key][] = unquote($m[1]);
         } elseif (preg_match('/^([^\s:#][^:]*):\s*(.*)$/', $line, $m)) {
             $key = trim($m[1]);
             $value = trim($m[2]);
@@ -163,10 +175,10 @@ function parse_frontmatter(array $lines): array {
                 $fields[$key] = [];
             } elseif (str_starts_with($value, '[') && str_ends_with($value, ']')) {
                 $fields[$key] = array_values(array_filter(array_map(
-                    fn($v) => trim($v, " \t\"'"), explode(',', substr($value, 1, -1))
+                    fn($v) => unquote($v), explode(',', substr($value, 1, -1))
                 ), 'strlen'));
             } else {
-                $fields[$key] = [trim($value, " \t\"'")];
+                $fields[$key] = [unquote($value)];
             }
         }
     }
@@ -844,9 +856,9 @@ $fmLines = set_frontmatter($fmLines, 'Note Status', 'Published');
 if (!isset($fm['Note Type'])) {
     $fmLines = set_frontmatter($fmLines, 'Note Type', 'Note');
 }
-$fmLines = set_frontmatter($fmLines, 'Note Published', human_date($published));
+$fmLines = set_frontmatter($fmLines, 'Note Published', $published, false);
 if ($isUpdate) {
-    $fmLines = set_frontmatter($fmLines, 'Note Updated', human_date($updated));
+    $fmLines = set_frontmatter($fmLines, 'Note Updated', $updated, false);
 }
 $fmLines = set_frontmatter($fmLines, 'Note URL', $noteUrl, false);
 [, $originalBody] = split_draft($draftText);
