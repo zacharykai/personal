@@ -4,7 +4,11 @@
 .well-known/
 auth/
 micropub/
-assets/
+assets/*
+!assets/files/
+assets/files/*
+!assets/files/scripts/
+assets/files/scripts/*.json
 art/
 catalog/
 events/
@@ -40,5 +44,6 @@ lists/starwars.php
 lists/vintagecars.php
 
 deploy.php
+deploy-manifest.txt
 random.php
 search.php
