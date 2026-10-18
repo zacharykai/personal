@@ -1733,6 +1733,17 @@
         <zk:tags>food,personal</zk:tags>
     </url>
 
+    <url>
+        <!-- Cooking Conundrums Challenge -->
+        <zk:title>Cooking Conundrums Challenge</zk:title>
+        <loc>https://zacharykai.net/notes/cookingqna</loc>
+        <lastmod>2026-10-18</lastmod>
+        <zk:content>a new blogging challenge of ten questions about cooking, plus my answers: who taught me, the recipe blogs I follow, cooking shows I love, and why onions are worth the tears.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>challenges</zk:subcategory>
+        <zk:tags>blogging,food,personal</zk:tags>
+    </url>
+
     <!-- OFFERINGS -->
 
     <url>
