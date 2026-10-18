@@ -19,6 +19,9 @@
  * git can't see (photos, art, feeds). Deleted and renamed-away files are listed
  * but left on the server.
  *
+ * Ships nothing, not even a push, when HEAD is already live and no extra paths
+ * are given; retry a failed push with `git push origin main`.
+ *
  * Exit codes: 0 all done, 2 deployed (or --no-deploy) but a push failed,
  * 1 anything else.
  */
@@ -117,6 +120,11 @@ if ($opts['since'] !== null) {
 git('rev-parse HEAD', $out);
 $head = $out[0];
 
+if ($base === $head && !$extras) {
+    say('Nothing to ship: ' . substr($head, 0, 7) . ' is already live.');
+    exit(0);
+}
+
 // ---------------------------------------------------------------------------
 // What changed since the base
 // ---------------------------------------------------------------------------
@@ -168,7 +176,9 @@ $pushUrls = $pushUrls ?: ['origin'];
 // Report the plan
 // ---------------------------------------------------------------------------
 
-say('Shipping ' . substr($head, 0, 7) . ' (changes since ' . $baseLabel . ', ' . substr($base, 0, 7) . ')');
+$baseShort = substr($base, 0, 7);
+say('Shipping ' . substr($head, 0, 7) . ' (changes since '
+    . (str_starts_with($base, $baseLabel) ? $baseShort : "$baseLabel, $baseShort") . ')');
 say();
 say('Push to:');
 foreach ($pushUrls as $url) {
@@ -255,6 +265,6 @@ if ($opts['no-deploy']) {
 say();
 say('Done.');
 say('  Pushed:  ' . (count($pushUrls) - count($pushFailed)) . '/' . count($pushUrls) . ' remotes'
-    . ($pushFailed ? ' (failed: ' . implode(', ', $pushFailed) . '; re-run ship later)' : ''));
+    . ($pushFailed ? ' (failed: ' . implode(', ', $pushFailed) . '; retry with `git push origin main`)' : ''));
 say("  Deploy:  $deployState");
 exit(str_starts_with($deployState, 'FAILED') ? 1 : ($pushFailed ? 2 : 0));
