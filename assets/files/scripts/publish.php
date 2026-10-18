@@ -4,7 +4,8 @@
  * publish.php
  * Publishes a Markdown draft from the Obsidian vault as a note on zacharykai.net:
  * renders notes/<slug>.html, records its sitemap.xml entry, runs the site build,
- * commits, pushes to every remote, and deploys the changed files over SFTP.
+ * commits, then ships: pushes to every remote and deploys the changed files
+ * over SFTP (see ship.php).
  *
  * Usage:
  *   php assets/files/scripts/publish.php path/to/draft.md
@@ -38,7 +39,6 @@ const SITE_URL = 'https://zacharykai.net';
 const WORDS_PER_MINUTE = 238;
 const SNAPSHOT_EXTENSIONS = ['html', 'xml'];
 const SKIP_DIRS = ['.git', 'vendor', 'node_modules'];
-const NOT_DEPLOYED_PREFIX = 'assets/files/scripts/';
 
 $siteDir = dirname(__DIR__, 3);
 $errors = [];
@@ -866,54 +866,21 @@ file_put_contents($draftPath, "---\n" . implode("\n", $fmLines) . "\n---\n" . $o
 say('Draft updated with Note Status, Note Published' . ($isUpdate ? ', Note Updated' : '') . ' and Note URL.');
 
 // ---------------------------------------------------------------------------
-// Push to every remote
+// Ship: push to every remote, then deploy
 // ---------------------------------------------------------------------------
 
-git('config --get-all remote.origin.pushurl', $pushUrls);
-$pushUrls = $pushUrls ?: ['origin'];
-$pushFailed = [];
+// Ship finds the tracked files from git; the gitignored ones (feeds, images)
+// it can't see, so name them.
+$ignored = array_values(array_diff($changed, $tracked));
 say();
-say('Pushing...');
-foreach ($pushUrls as $url) {
-    if (git('push ' . escapeshellarg($url) . ' HEAD:main', $out) === 0) {
-        say("  ok      $url");
-    } else {
-        say("  FAILED  $url");
-        $pushFailed[] = $url;
-    }
-}
-git('fetch --quiet origin');
-
-// ---------------------------------------------------------------------------
-// Deploy
-// ---------------------------------------------------------------------------
-
-$deployFiles = array_values(array_filter($changed, fn($rel) => !str_starts_with($rel, NOT_DEPLOYED_PREFIX)));
-$manifest = "$siteDir/deploy-manifest.txt";
-$deployState = 'skipped (--no-deploy)';
-
-if (!$opts['no-deploy']) {
-    file_put_contents($manifest, implode("\n", $deployFiles) . "\n");
-    if (!is_file("$siteDir/vendor/autoload.php")) {
-        $deployState = 'not run: run `composer install` in the site repo, then `php deploy.php --manifest=deploy-manifest.txt`';
-    } else {
-        say();
-        say('Deploying...');
-        passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg("$siteDir/deploy.php")
-            . ' --manifest=' . escapeshellarg($manifest), $deployCode);
-        if ($deployCode === 0) {
-            unlink($manifest);
-            $deployState = 'done';
-        } else {
-            $deployState = 'FAILED: fix the problem above, then run `php deploy.php --manifest=deploy-manifest.txt`';
-        }
-    }
-}
+passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/ship.php')
+    . ($opts['no-deploy'] ? ' --no-deploy' : '')
+    . ($ignored ? ' ' . implode(' ', array_map('escapeshellarg', $ignored)) : ''), $shipCode);
 
 say();
-say('Done.');
-say($deployState === 'done' ? "  Live at: $noteUrl" : "  Not live yet: $noteUrl goes live once the deploy succeeds.");
-say('  Pushed:  ' . (count($pushUrls) - count($pushFailed)) . '/' . count($pushUrls) . ' remotes'
-    . ($pushFailed ? ' (failed: ' . implode(', ', $pushFailed) . '; re-run `git push` later)' : ''));
-say("  Deploy:  $deployState");
-exit($pushFailed || str_starts_with($deployState, 'FAILED') ? 1 : 0);
+if ($shipCode !== 1 && !$opts['no-deploy']) {
+    say("Live at: $noteUrl");
+} else {
+    say("Not live yet: $noteUrl goes live once a ship deploys it.");
+}
+exit($shipCode);
