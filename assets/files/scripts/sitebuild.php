@@ -282,8 +282,11 @@ function update_currently_reading(string $site_dir, string $cache_file): void {
 
     // index.php: cover grid
     $indexHtml  = $start . '<!-- Currently Reading -->' . PHP_EOL;
-    $indexHtml .= $in . '<section>' . PHP_EOL;
+    $indexHtml .= $in . '<section class="hub-section">' . PHP_EOL;
     $indexHtml .= $in . '    <h2>Currently Reading</h2>' . PHP_EOL;
+    $indexHtml .= $in . '    <aside class="hub-callout">' . PHP_EOL;
+    $indexHtml .= $in . '        <p>My book notes live at <a href="https://www.roadlessread.com/" rel="noopener">Road Less Read</a>.</p>' . PHP_EOL;
+    $indexHtml .= $in . '    </aside>' . PHP_EOL;
     $indexHtml .= $in . '    <div class="currently-reading">' . PHP_EOL;
     foreach ($books as $book) {
         $title   = htmlspecialchars($book['title']);
@@ -758,7 +761,7 @@ function bake_static_homepage(string $site_dir): void {
     $content = file_get_contents($html_file);
 
     // Locate the latest-notes block: from its marker comment to the next </ul>.
-    // The surrounding <section class="hub-band-main"> … </section> wrapper is
+    // The surrounding <section class="hub-section hub-notes"> … </section> wrapper is
     // preserved — only the comment, heading, and <ul> are rebuilt.
     $block_start = '<!-- Latest Notes: Script For Pulling In Latest Ones -->';
     $block_end   = '</ul>';
@@ -814,18 +817,18 @@ function bake_static_homepage(string $site_dir): void {
 
     $items = '';
     foreach ($latest as $post) {
-        $items .= '                        <li><a href="' . htmlspecialchars($post['url']) . '">'
+        $items .= '                    <li><a href="' . htmlspecialchars($post['url']) . '">'
                 . htmlspecialchars($post['title']) . '</a> | '
                 . htmlspecialchars($post['display_date']) . "</li>\n";
     }
 
     $static_block = $block_start . "\n"
-        . "                    <section class=\"hub-band-main\">\n"
-        . "                        <h2>Latest Notes</h2>\n"
+        . "                <section class=\"hub-section hub-notes\">\n"
+        . "                    <h2>Latest Notes</h2>\n"
         . "\n"
-        . "                        <ul>\n"
+        . "                    <ul>\n"
         . $items
-        . "                        </ul>";
+        . "                    </ul>";
 
     $baked = substr($content, 0, $start_pos) . $static_block . substr($content, $end_pos);
 
