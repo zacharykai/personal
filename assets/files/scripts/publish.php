@@ -793,7 +793,7 @@ if (!$opts['no-preview']) {
     $previewUrl = "http://127.0.0.1:$port/notes/$slug";
     say();
     say("Preview: $previewUrl");
-    run('xdg-open ' . escapeshellarg($previewUrl) . ' >/dev/null &');
+    run('xdg-open ' . escapeshellarg($previewUrl) . ' >/dev/null 2>&1 &');
 }
 
 // Files that already had uncommitted edits: any the build also touched get
@@ -912,7 +912,7 @@ if (!$opts['no-deploy']) {
 
 say();
 say('Done.');
-say("  Live at: $noteUrl");
+say($deployState === 'done' ? "  Live at: $noteUrl" : "  Not live yet: $noteUrl goes live once the deploy succeeds.");
 say('  Pushed:  ' . (count($pushUrls) - count($pushFailed)) . '/' . count($pushUrls) . ' remotes'
     . ($pushFailed ? ' (failed: ' . implode(', ', $pushFailed) . '; re-run `git push` later)' : ''));
 say("  Deploy:  $deployState");
