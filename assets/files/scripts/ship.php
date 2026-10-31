@@ -19,6 +19,9 @@
  * git can't see (photos, art, feeds). Deleted and renamed-away files are listed
  * but left on the server.
  *
+ * After a successful deploy it also refreshes the latest-notes list in the
+ * GitHub profile README (see profile-readme.php).
+ *
  * Ships nothing, not even a push, when HEAD is already live and no extra paths
  * are given; retry a failed push with `git push origin main`.
  *
@@ -160,8 +163,8 @@ $skipped = array_values(array_filter($upload, 'not_deployed'));
 $deployFiles = array_values(array_diff($upload, $skipped));
 
 // Uploads come from the working tree, so a file with uncommitted edits would
-// put work on the server that git doesn't have.
-if ($deployFiles) {
+// put work on the server that git doesn't have. A push-only ship uploads nothing.
+if ($deployFiles && !$opts['no-deploy']) {
     git('diff --name-only HEAD -- ' . implode(' ', array_map('escapeshellarg', $deployFiles)), $dirty);
     if ($dirty) {
         fail("These files would be deployed but have uncommitted changes. Commit or stash them first:\n  "
@@ -211,6 +214,8 @@ if (in_array('sitemap.xml', $deployFiles, true) && !in_array('sitemap.html', $de
 if ($opts['dry-run']) {
     say();
     say('Dry run: nothing pushed or uploaded.');
+    say();
+    passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/profile-readme.php') . ' --dry-run');
     exit(0);
 }
 
@@ -267,4 +272,13 @@ say('Done.');
 say('  Pushed:  ' . (count($pushUrls) - count($pushFailed)) . '/' . count($pushUrls) . ' remotes'
     . ($pushFailed ? ' (failed: ' . implode(', ', $pushFailed) . '; retry with `git push origin main`)' : ''));
 say("  Deploy:  $deployState");
+
+// Refresh the latest-notes list in the GitHub profile README once the new
+// notes are live. A problem there is reported but doesn't change the exit code.
+if ($deployState === 'done' || $deployState === 'nothing to upload') {
+    say();
+    say('Profile README...');
+    passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/profile-readme.php'));
+}
+
 exit(str_starts_with($deployState, 'FAILED') ? 1 : ($pushFailed ? 2 : 0));
