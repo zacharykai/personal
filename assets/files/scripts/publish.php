@@ -21,11 +21,20 @@
  *   Note Slug         required, e.g. "tend" -> /notes/tend
  *   Note Description  required, one sentence
  *   Note Section      required, a sitemap section (reflections, trades, ...)
+ *   Note Group        optional, a sitemap sub-group within the section
+ *                     (indieweb_carnival, bear_blog_carnival, ...). Groups
+ *                     listed in COLLECTION_GROUPS also get an entry on their
+ *                     collection page.
  *   Note Category     required, the site tags (comma-separated is fine)
  *   Note Blurb        optional sitemap line (defaults to the description)
  *   Note Published    optional, to backdate a new note
  * Written back after publishing: Note Status, Note Type, Note Published,
  * Note Updated, Note URL.
+ *
+ * Only the changes this publish makes are committed. A file that already had
+ * uncommitted edits gets just this publish's changes staged on top of what's
+ * in the index; the earlier edits stay uncommitted. Those files can't be
+ * deployed until the rest is committed, so the ship then skips the deploy.
  */
 
 declare(strict_types=1);
@@ -39,6 +48,14 @@ const SITE_URL = 'https://zacharykai.net';
 const WORDS_PER_MINUTE = 238;
 const SNAPSHOT_EXTENSIONS = ['html', 'xml'];
 const SKIP_DIRS = ['.git', 'vendor', 'node_modules'];
+
+// Sitemap groups whose notes are also listed on a collection page, under an
+// <h3> with this id and heading inside the page's Entries section.
+const COLLECTION_GROUPS = [
+    'indieweb_carnival' => ['collections/iwc.html', 'indieweb-carnival', 'IndieWeb Carnival'],
+    'indieweb_fiction_carnival' => ['collections/iwc.html', 'indieweb-fiction-carnival', 'IndieWeb Fiction Carnival'],
+    'bear_blog_carnival' => ['collections/iwc.html', 'bear-blog-carnival', 'Bear Blog Carnival'],
+];
 
 $siteDir = dirname(__DIR__, 3);
 $errors = [];
@@ -230,6 +247,7 @@ $slug = strtolower(field($fm, 'Note Slug'));
 $description = field($fm, 'Note Description');
 $blurb = field($fm, 'Note Blurb') ?: lcfirst($description);
 $section = strtolower(field($fm, 'Note Section'));
+$group = strtolower(field($fm, 'Note Group'));
 $tags = [];
 foreach ($fm['Note Category'] ?? [] as $item) {
     foreach (explode(',', $item) as $tag) {
@@ -250,6 +268,9 @@ foreach (['Note Title' => $title, 'Note Slug' => $slug, 'Note Description' => $d
 }
 if (!$tags) {
     $errors[] = 'Missing frontmatter: Note Category (the site tags)';
+}
+if ($group !== '' && !preg_match('/^[a-z0-9]+(_[a-z0-9]+)*$/', $group)) {
+    $errors[] = "Note Group must be lowercase words joined by underscores: '$group'";
 }
 if ($slug !== '' && !preg_match('/^[a-z0-9]+(-[a-z0-9]+)*$/', $slug)) {
     $errors[] = "Note Slug must be lowercase letters, numbers and hyphens: '$slug'";
@@ -274,6 +295,10 @@ if ($section !== '' && !in_array($section, $knownSections, true)) {
 }
 $newTags = array_values(array_diff($tags, $knownTags));
 
+preg_match_all('#<zk:subcategory>' . preg_quote($section, '#') . '</zk:subcategory>\s*<zk:subsubcategory>([^<]+)</zk:subsubcategory>#', $sitemap, $m);
+$knownGroups = array_unique($m[1]);
+$newGroup = $group !== '' && $section !== '' && !in_array($group, $knownGroups, true);
+
 /** Returns [start, length] of the <url> block for $url in the sitemap, or null. */
 function find_entry(string $xml, string $url): ?array {
     $loc = strpos($xml, '<loc>' . $url . '</loc>');
@@ -288,7 +313,7 @@ function find_entry(string $xml, string $url): ?array {
     return [$start, $end + strlen("    </url>\n") - $start];
 }
 
-function sitemap_entry(string $title, string $url, string $lastmod, string $blurb, string $section, array $tags): string {
+function sitemap_entry(string $title, string $url, string $lastmod, string $blurb, string $section, string $group, array $tags): string {
     $x = fn($s) => htmlspecialchars($s, ENT_XML1 | ENT_NOQUOTES, 'UTF-8');
     $comment = str_replace('--', '–', $title);
     return "    <url>\n"
@@ -299,8 +324,38 @@ function sitemap_entry(string $title, string $url, string $lastmod, string $blur
         . "        <zk:content>{$x($blurb)}</zk:content>\n"
         . "        <zk:category>notes</zk:category>\n"
         . "        <zk:subcategory>$section</zk:subcategory>\n"
+        . ($group !== '' ? "        <zk:subsubcategory>$group</zk:subsubcategory>\n" : '')
         . "        <zk:tags>" . implode(',', $tags) . "</zk:tags>\n"
         . "    </url>\n";
+}
+
+/**
+ * Lists the note on a collection page: inside the Entries section, under the
+ * group's <h3> (added at the end if it's missing), newest first. An existing
+ * entry for the note is replaced where it stands. Returns null if the page has
+ * no Entries section.
+ */
+function collection_with_entry(string $html, string $headingId, string $heading, string $href, string $li): ?string {
+    $open = strpos($html, '<!-- Entries -->');
+    $close = $open === false ? false : strpos($html, '</section>', $open);
+    if ($close === false) {
+        return null;
+    }
+    $entries = substr($html, $open, $close - $open);
+    $pad = str_repeat(' ', 20);
+    $existing = '#^ *<li><a href="' . preg_quote($href, '#') . '">.*</li>$#m';
+    if (preg_match($existing, $entries)) {
+        $entries = preg_replace($existing, "$pad    $li", $entries, 1);
+    } elseif (preg_match('#<h3 id="' . preg_quote($headingId, '#') . '">[^\n]*\n\s*<ul>\n#', $entries, $m, PREG_OFFSET_CAPTURE)) {
+        $at = $m[0][1] + strlen($m[0][0]);
+        $entries = substr_replace($entries, "$pad    $li\n", $at, 0);
+    } else {
+        $entries = rtrim($entries, " \n") . "\n"
+            . "$pad<h3 id=\"$headingId\">" . esc($heading) . "</h3>\n"
+            . "$pad<ul>\n$pad    $li\n$pad</ul>\n"
+            . str_repeat(' ', 16);
+    }
+    return substr_replace($html, $entries, $open, $close - $open);
 }
 
 // ---------------------------------------------------------------------------
@@ -638,7 +693,7 @@ $noteHtml = strtr(file_get_contents(__DIR__ . '/templates/note.html'), [
     '{{BODY}}' => $bodyHtml,
 ]);
 
-$entry = sitemap_entry($title, $noteUrl, $updated, $blurb, $section, $tags);
+$entry = sitemap_entry($title, $noteUrl, $updated, $blurb, $section, $group, $tags);
 
 $plainTitle = strtolower($title);
 $message = $opts['message'] ?? ($isUpdate
@@ -647,7 +702,10 @@ $message = $opts['message'] ?? ($isUpdate
 
 say(($isUpdate ? 'Updating' : 'Publishing') . ": $title");
 say("  URL:       $noteUrl");
-say("  Section:   $section");
+say("  Section:   $section" . ($group !== '' ? " / $group" . ($newGroup ? '  (new group)' : '') : ''));
+if (isset(COLLECTION_GROUPS[$group])) {
+    say('  Listed on: ' . COLLECTION_GROUPS[$group][0] . ' (' . COLLECTION_GROUPS[$group][2] . ')');
+}
 say('  Tags:      ' . implode(', ', $tags) . ($newTags ? '  (new: ' . implode(', ', $newTags) . ')' : ''));
 say("  Published: " . human_date($published) . ($isUpdate ? '  |  Updated: ' . human_date($updated) : ''));
 say("  Words:     $wordCount (~$readingMinutes min)");
@@ -671,6 +729,9 @@ if ($opts['dry-run']) {
     exit(0);
 }
 
+if ($newGroup && !ask("New sitemap group '$group' in '$section' — create it?")) {
+    fail("Stopped: '$group' isn't an existing group. Fix Note Group, or say yes to create it.");
+}
 foreach ($newTags as $tag) {
     if (!ask("New tag '$tag' — create it?")) {
         fail("Stopped: '$tag' isn't an existing tag. Fix Note Category, or say yes to create it.");
@@ -686,6 +747,7 @@ if (trim($out[0] ?? '') !== 'main') {
     fail('The site repo is not on main. Switch to main before publishing.');
 }
 git('status --porcelain', $dirtyBefore);
+git('diff --cached --name-only', $stagedBefore);
 
 // ---------------------------------------------------------------------------
 // Snapshot, so a "no" (or a failed build) puts every file back
@@ -750,6 +812,18 @@ if ($found) {
 }
 file_put_contents($sitemapPath, $sitemap);
 
+if (isset(COLLECTION_GROUPS[$group])) {
+    [$collectionRel, $headingId, $heading] = COLLECTION_GROUPS[$group];
+    $li = '<li><a href="/notes/' . $slug . '">' . esc($title) . '</a> (<time datetime="' . $published . '">'
+        . human_date($published) . '</time>) — ' . esc($blurb) . '</li>';
+    $collection = collection_with_entry(file_get_contents("$siteDir/$collectionRel"), $headingId, $heading, "/notes/$slug", $li);
+    if ($collection === null) {
+        rollback();
+        fail("Couldn't find the Entries section in $collectionRel (looked for '<!-- Entries -->').");
+    }
+    file_put_contents("$siteDir/$collectionRel", $collection);
+}
+
 say();
 say('Building the site...');
 $code = run(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/sitebuild.php') . ' --offline', $buildOutput);
@@ -796,32 +870,102 @@ if (!$opts['no-preview']) {
     run('xdg-open ' . escapeshellarg($previewUrl) . ' >/dev/null 2>&1 &');
 }
 
-// Files that already had uncommitted edits: any the build also touched get
-// committed and deployed with this note, so say so before asking.
-$swept = [];
+// Work out what to stage. Each changed file gets this publish's changes
+// applied on top of its index version (a three-way merge with the pre-publish
+// working copy as the base), so any edits it already had stay uncommitted.
+// This happens before asking, so a clash can still roll everything back.
+
+/** Runs git, feeding/capturing raw bytes through temp files. Returns the exit code. */
+function git_raw(string $args, ?string &$stdout = null): int {
+    global $siteDir;
+    $tmp = tempnam(sys_get_temp_dir(), 'publish-git-');
+    exec('git -C ' . escapeshellarg($siteDir) . " $args > " . escapeshellarg($tmp) . ' 2>/dev/null', $_, $code);
+    $stdout = file_get_contents($tmp);
+    unlink($tmp);
+    return $code;
+}
+
+function temp_with(string $content): string {
+    $tmp = tempnam(sys_get_temp_dir(), 'publish-');
+    file_put_contents($tmp, $content);
+    return $tmp;
+}
+
+$tracked = array_values(array_filter($changed, fn($rel) => git('check-ignore -q ' . escapeshellarg($rel)) !== 0));
+$stage = [];      // rel => [mode, content to stage]
+$partly = [];     // files whose earlier uncommitted edits stay uncommitted
+$skippedNew = []; // untracked before publishing; left out of the commit
+$clashes = [];
+foreach ($tracked as $rel) {
+    $now = file_get_contents("$siteDir/$rel");
+    $was = array_key_exists($rel, $before) ? $before[$rel] : ($copiedImages[$rel] ?? null);
+    git('ls-files -s -- ' . escapeshellarg($rel), $ls);
+    if (!$ls) {
+        if ($was === null) {
+            $stage[$rel] = ['100644', $now];
+        } else {
+            $skippedNew[] = $rel;
+        }
+        continue;
+    }
+    [$mode, $sha] = explode(' ', $ls[0]);
+    git_raw('cat-file blob ' . escapeshellarg($sha), $indexed);
+    if ($was === null || $was === $indexed) {
+        $stage[$rel] = [$mode, $now];
+        continue;
+    }
+    $files = [temp_with($indexed), temp_with($was), temp_with($now)];
+    $code = git_raw('merge-file -p ' . implode(' ', array_map('escapeshellarg', $files)), $merged);
+    array_map('unlink', $files);
+    if ($code !== 0) {
+        $clashes[] = $rel;
+    } else {
+        $stage[$rel] = [$mode, $merged];
+        $partly[] = $rel;
+    }
+}
+
 $untouched = [];
 foreach ($dirtyBefore as $line) {
     $path = trim(substr($line, 3), '"');
-    if (in_array($path, $changed, true)) {
-        $swept[] = $path;
-    } else {
+    if (!in_array($path, $changed, true)) {
         $untouched[] = $path;
     }
 }
 if ($untouched) {
     say();
-    say('Left alone (uncommitted before publishing, not part of this publish):');
-    foreach ($untouched as $p) {
+    say('Left alone (' . count($untouched) . ' files uncommitted before publishing, not part of this publish).');
+}
+if ($partly) {
+    say();
+    say('These files already had uncommitted edits. Only this publish\'s changes to them get committed;');
+    say('your other edits stay uncommitted:');
+    foreach ($partly as $p) {
         say("  $p");
     }
 }
-if ($swept) {
+if ($skippedNew) {
     say();
-    say('WARNING: these files already had your uncommitted edits, and this publish changed them too.');
-    say('Publishing commits and deploys those edits along with the note:');
-    foreach ($swept as $p) {
+    say('Untracked before publishing, so left out of the commit:');
+    foreach ($skippedNew as $p) {
         say("  $p");
     }
+}
+if ($stagedBefore) {
+    say();
+    say('Already staged, so committed along with this note:');
+    foreach ($stagedBefore as $p) {
+        say("  $p");
+    }
+}
+if ($clashes) {
+    if ($server) {
+        proc_terminate($server);
+        proc_close($server);
+    }
+    rollback();
+    fail("This publish's changes overlap your uncommitted edits in these files, so they can't be committed apart:\n  "
+        . implode("\n  ", $clashes) . "\nCommit or stash those edits, then publish again.");
 }
 
 say();
@@ -839,8 +983,15 @@ if (!$go) {
 // Commit only what this publish wrote
 // ---------------------------------------------------------------------------
 
-$tracked = array_values(array_filter($changed, fn($rel) => git('check-ignore -q ' . escapeshellarg($rel)) !== 0));
-git('add -- ' . implode(' ', array_map('escapeshellarg', $tracked)));
+foreach ($stage as $rel => [$mode, $content]) {
+    $tmp = temp_with($content);
+    git('hash-object -w --path=' . escapeshellarg($rel) . ' ' . escapeshellarg($tmp), $out);
+    unlink($tmp);
+    if (git('update-index --add --cacheinfo ' . escapeshellarg("$mode," . trim($out[0] ?? '') . ",$rel"), $out) !== 0) {
+        say(implode(PHP_EOL, $out));
+        fail("Couldn't stage $rel (output above). The files are written but not committed.");
+    }
+}
 if (git('commit -m ' . escapeshellarg($message), $out) !== 0) {
     say(implode(PHP_EOL, $out));
     fail('git commit failed (output above). The files are written but not committed.');
@@ -872,13 +1023,27 @@ say('Draft updated with Note Status, Note Published' . ($isUpdate ? ', Note Upda
 // Ship finds the tracked files from git; the gitignored ones (feeds, images)
 // it can't see, so name them.
 $ignored = array_values(array_diff($changed, $tracked));
+
+// Deploys upload the working copy, so a committed file that still has other
+// uncommitted edits can't go up yet: push only, and say what's holding it.
+git('diff --name-only HEAD -- ' . implode(' ', array_map('escapeshellarg', $tracked)), $stillDirty);
+$holdDeploy = $stillDirty && !$opts['no-deploy'];
+if ($holdDeploy) {
+    say();
+    say('Not deploying yet: these committed files still have your other uncommitted edits,');
+    say('and a deploy would upload those too. Commit them, then run:');
+    say('  php assets/files/scripts/ship.php' . ($ignored ? ' ' . implode(' ', array_map('escapeshellarg', $ignored)) : ''));
+    foreach ($stillDirty as $p) {
+        say("    $p");
+    }
+}
 say();
 passthru(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/ship.php')
-    . ($opts['no-deploy'] ? ' --no-deploy' : '')
+    . ($opts['no-deploy'] || $holdDeploy ? ' --no-deploy' : '')
     . ($ignored ? ' ' . implode(' ', array_map('escapeshellarg', $ignored)) : ''), $shipCode);
 
 say();
-if ($shipCode !== 1 && !$opts['no-deploy']) {
+if ($shipCode !== 1 && !$opts['no-deploy'] && !$holdDeploy) {
     say("Live at: $noteUrl");
 } else {
     say("Not live yet: $noteUrl goes live once a ship deploys it.");
