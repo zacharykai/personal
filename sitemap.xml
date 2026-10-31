@@ -1744,6 +1744,18 @@
         <zk:tags>blogging,food,personal</zk:tags>
     </url>
 
+    <url>
+        <!-- In The Simplicity Lies Inherent Complexity -->
+        <zk:title>In The Simplicity Lies Inherent Complexity</zk:title>
+        <loc>https://zacharykai.net/notes/icoct26</loc>
+        <lastmod>2026-10-31</lastmod>
+        <zk:content>blank pages, infinite possibility, and the dread underneath.</zk:content>
+        <zk:category>notes</zk:category>
+        <zk:subcategory>indieweb_carnivals</zk:subcategory>
+        <zk:subsubcategory>indieweb_carnival</zk:subsubcategory>
+        <zk:tags>creative,indieweb,personal</zk:tags>
+    </url>
+
     <!-- OFFERINGS -->
 
     <url>
