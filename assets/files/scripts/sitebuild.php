@@ -153,6 +153,10 @@ function get_currently_reading(string $cache_file): array {
         // curl not available locally — return whatever is in the cache, or empty
         return [];
     }
+    if (HARDCOVER_API_TOKEN === '') {
+        log_msg('Hardcover: HARDCOVER_API_TOKEN is not set in .env');
+        return [];
+    }
 
     $query = '{
         me {
@@ -173,7 +177,8 @@ function get_currently_reading(string $cache_file): array {
         CURLOPT_POST           => true,
         CURLOPT_HTTPHEADER     => [
             'Content-Type: application/json',
-            'Authorization: Bearer ' . HARDCOVER_API_TOKEN,
+            // Hardcover's settings page hands out the token already prefixed with "Bearer ".
+            'Authorization: ' . (stripos(HARDCOVER_API_TOKEN, 'Bearer ') === 0 ? '' : 'Bearer ') . HARDCOVER_API_TOKEN,
         ],
         CURLOPT_POSTFIELDS => json_encode(['query' => $query]),
         CURLOPT_TIMEOUT    => 10,
@@ -184,10 +189,15 @@ function get_currently_reading(string $cache_file): array {
     curl_close($ch);
 
     if ($http_code !== 200 || !$response) {
+        log_msg('Hardcover request failed (HTTP ' . $http_code . ')' . ($http_code === 401 || $http_code === 403 ? ' — token missing, expired, or invalid' : ''));
         return [];
     }
 
-    $data       = json_decode($response, true);
+    $data = json_decode($response, true);
+    if (!empty($data['errors'])) {
+        log_msg('Hardcover GraphQL error: ' . ($data['errors'][0]['message'] ?? 'unknown'));
+        return [];
+    }
     $user_books = $data['data']['me'][0]['user_books'] ?? [];
 
     $books = [];
@@ -280,7 +290,7 @@ function update_currently_reading(string $site_dir, string $cache_file): void {
     $ok = replace_between_markers($site_dir . 'now.html', $nowHtml);
     log_msg('now.html ' . ($ok ? 'updated' : 'FAILED'));
 
-    // index.php: cover grid
+    // index.html: cover grid
     $indexHtml  = $start . '<!-- Currently Reading -->' . PHP_EOL;
     $indexHtml .= $in . '<section class="hub-section">' . PHP_EOL;
     $indexHtml .= $in . '    <h2>Currently Reading</h2>' . PHP_EOL;
@@ -310,8 +320,8 @@ function update_currently_reading(string $site_dir, string $cache_file): void {
     $indexHtml .= $in . '</section>' . PHP_EOL;
     $indexHtml .= $in . $end;
 
-    $ok = replace_between_markers($site_dir . 'index.php', $indexHtml);
-    log_msg('index.php ' . ($ok ? 'updated' : 'FAILED'));
+    $ok = replace_between_markers($site_dir . 'index.html', $indexHtml);
+    log_msg('index.html ' . ($ok ? 'updated' : 'FAILED'));
 }
 
 // ---------------------------------------------------------------------------
@@ -1105,9 +1115,9 @@ function bake_static_sitemap(string $site_dir, string $base_url): void {
                 </div>
                 <nav>
                     <p><a href="/about"><img src="/assets/imgs/svg/user.svg" class="nav-icon" alt="">About</a></p>
-                    <p><a href="/jots"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
+                    <p><a href="/jots/"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
                     <p><a href="/links"><img src="/assets/imgs/svg/links.svg" class="nav-icon" alt="">Links</a></p>
-                    <p><a href="/notes"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
+                    <p><a href="/notes/"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
                     <p><a href="/now"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="">Now</a></p>
                     <p><a href="/pages"><img src="/assets/imgs/svg/files.svg" class="nav-icon" alt="">Pages</a></p>
                     <p><a href="/projects"><img src="/assets/imgs/svg/projects.svg" class="nav-icon" alt="">Projects</a></p>
@@ -1242,7 +1252,7 @@ $sections
                 <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
                 <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
                 <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://zacharykai.net/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
+                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
                 <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
                 <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
             </p>
@@ -1377,9 +1387,9 @@ function bake_static_tags(string $site_dir, string $base_url): void {
                 </div>
                 <nav>
                     <p><a href="/about"><img src="/assets/imgs/svg/user.svg" class="nav-icon" alt="">About</a></p>
-                    <p><a href="/jots"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
+                    <p><a href="/jots/"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
                     <p><a href="/links"><img src="/assets/imgs/svg/links.svg" class="nav-icon" alt="">Links</a></p>
-                    <p><a href="/notes"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
+                    <p><a href="/notes/"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
                     <p><a href="/now"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="">Now</a></p>
                     <p><a href="/pages"><img src="/assets/imgs/svg/files.svg" class="nav-icon" alt="">Pages</a></p>
                     <p><a href="/projects"><img src="/assets/imgs/svg/projects.svg" class="nav-icon" alt="">Projects</a></p>
@@ -1456,7 +1466,7 @@ SIDEBAR;
                 <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
                 <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
                 <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://zacharykai.net/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
+                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
                 <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
                 <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
             </p>
@@ -1735,7 +1745,7 @@ function bake_static_notes_index(string $site_dir): void {
         <link rel="alternate" type="application/rss+xml" title="Zachary Kai" href="/assets/rss.xml">
         <link rel="alternate" type="application/rss+xml" title="Notes — Zachary Kai" href="/assets/files/feeds/notes.xml">
         <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention" />
-        <link rel="canonical" href="https://zacharykai.net/notes">
+        <link rel="canonical" href="https://zacharykai.net/notes/">
         <!-- Page Info -->
         <title>Notes | Zachary Kai</title>
         <meta name="description" content="All notes, essays, and reflections on zacharykai.net, newest first.">
@@ -1762,9 +1772,9 @@ function bake_static_notes_index(string $site_dir): void {
                 </div>
                 <nav>
                     <p><a href="/about"><img src="/assets/imgs/svg/user.svg" class="nav-icon" alt="">About</a></p>
-                    <p><a href="/jots"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
+                    <p><a href="/jots/"><img src="/assets/imgs/svg/jots.svg" class="nav-icon" alt="">Jots</a></p>
                     <p><a href="/links"><img src="/assets/imgs/svg/links.svg" class="nav-icon" alt="">Links</a></p>
-                    <p><a href="/notes"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
+                    <p><a href="/notes/"><img src="/assets/imgs/svg/pencil-line.svg" class="nav-icon" alt="">Notes</a></p>
                     <p><a href="/now"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="">Now</a></p>
                     <p><a href="/pages"><img src="/assets/imgs/svg/files.svg" class="nav-icon" alt="">Pages</a></p>
                     <p><a href="/projects"><img src="/assets/imgs/svg/projects.svg" class="nav-icon" alt="">Projects</a></p>
@@ -1814,7 +1824,7 @@ $items                </ul>
 
                 <section>
                     <!-- Copy + Share -->
-                    <p><strong>Copy + Share</strong>: <a href="/notes">zacharykai.net/notes</a></p>
+                    <p><strong>Copy + Share</strong>: <a href="/notes/">zacharykai.net/notes</a></p>
                 </section>
 
             </section>
@@ -1883,7 +1893,7 @@ $items                </ul>
                 <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
                 <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
                 <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://zacharykai.net/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
+                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
                 <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
                 <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
             </p>
@@ -2146,7 +2156,7 @@ $cards                </section>
                 <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
                 <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
                 <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://zacharykai.net/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
+                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
                 <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
                 <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
             </p>
@@ -2216,7 +2226,7 @@ log_msg('--- zacharykai.net (local) ---');
 if ($offline) {
     log_msg('SKIP currentread + update-location (--offline)');
 } else {
-    log_msg('RUN  currentread (Hardcover cache + now.html + index.php)');
+    log_msg('RUN  currentread (Hardcover cache + now.html + index.html)');
     update_currently_reading($site_dir, $cache_file);
 
     log_msg('RUN  update-location');
