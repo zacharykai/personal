@@ -71,6 +71,17 @@
     </url>
 
     <url>
+        <!-- Bio -->
+        <zk:title>Bio</zk:title>
+        <loc>https://zacharykai.net/bio</loc>
+        <lastmod>2026-11-09</lastmod>
+        <zk:content>a short bio: artist, writer, zinemaker, and avowed generalist.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>about_me</zk:subcategory>
+        <zk:tags>personal</zk:tags>
+    </url>
+
+    <url>
         <!-- Bookmarklets -->
         <zk:title>Bookmarklets</zk:title>
         <loc>https://zacharykai.net/bookmarklets</loc>
@@ -891,6 +902,17 @@
         <zk:category>pages</zk:category>
         <zk:subcategory>collections</zk:subcategory>
         <zk:tags>blogging,indieweb</zk:tags>
+    </url>
+
+    <url>
+        <!-- Haikus -->
+        <zk:title>Haikus</zk:title>
+        <loc>https://zacharykai.net/haikus</loc>
+        <lastmod>2026-11-09</lastmod>
+        <zk:content>a haiku a day through November 2026, for Writing Month.</zk:content>
+        <zk:category>pages</zk:category>
+        <zk:subcategory>collections</zk:subcategory>
+        <zk:tags>writing</zk:tags>
     </url>
 
     <url>
