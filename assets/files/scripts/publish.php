@@ -31,6 +31,15 @@
  * Written back after publishing: Note Status, Note Type, Note Published,
  * Note Updated, Note URL.
  *
+ * Images: ![[photo.jpg|alt text]] embeds are found in the vault, sorted by type
+ * into assets/imgs/<ext>/ (.jpeg becomes .jpg), resized to at most 900px wide
+ * (never upscaled, metadata such as GPS EXIF stripped) with ffmpeg, and given a
+ * matching 900px assets/imgs/webp/<name>.webp from cwebp. They render as
+ * <picture> (webp source + jpg/png img, class="scaledimg", lazy). gif, svg and
+ * webp sources are copied unchanged into assets/imgs/<ext>/ as a plain <img>.
+ * A destination that exists and isn't used by this note's published page is
+ * an error, never overwritten (the folders are shared site-wide).
+ *
  * Only the changes this publish makes are committed. A file that already had
  * uncommitted edits gets just this publish's changes staged on top of what's
  * in the index; the earlier edits stay uncommitted. Those files can't be
@@ -48,6 +57,7 @@ const SITE_URL = 'https://zacharykai.net';
 const WORDS_PER_MINUTE = 238;
 const SNAPSHOT_EXTENSIONS = ['html', 'xml'];
 const SKIP_DIRS = ['.git', 'vendor', 'node_modules'];
+const IMAGE_WIDTH = 900;
 
 // Sitemap groups whose notes are also listed on a collection page, under an
 // <h3> with this id and heading inside the page's Entries section.
@@ -391,7 +401,7 @@ $updated = $isUpdate ? $today : $published;
 // Markdown -> HTML
 // ---------------------------------------------------------------------------
 
-$images = []; // destination (site-relative) => source path
+$images = []; // destination (site-relative) => ['op' => resize|webp|copy, 'source' => path to read, 'from' => vault original]
 
 function resolve_image(string $name): ?string {
     global $draftPath, $vaultRoot;
@@ -422,24 +432,87 @@ function resolve_image(string $name): ?string {
 }
 
 function image_html(string $src, string $alt, int $lineNo): string {
-    global $images, $slug, $errors;
+    global $images, $errors, $siteDir, $notePath;
     if (trim($alt) === '') {
         $errors[] = "Line $lineNo: image '$src' has no alt text. Write it as ![[$src|description]] or ![description]($src).";
     }
-    if (!preg_match('#^(https?:)?//|^/#', $src)) {
-        $source = resolve_image(rawurldecode($src));
-        if ($source === null) {
-            $errors[] = "Line $lineNo: can't find image '$src' next to the draft or in the vault.";
-        } elseif (preg_match('#/(back-room|side-door)/#i', $source)) {
-            $errors[] = "Line $lineNo: image '$src' is inside a walled-off vault folder.";
-        } else {
-            $file = strtolower(preg_replace('/[^A-Za-z0-9._-]+/', '-', basename($source)));
-            $dest = "assets/imgs/notes/$slug/$file";
-            $images[$dest] = $source;
-            $src = "/$dest";
+    if (preg_match('#^(https?:)?//|^/#', $src)) {
+        return '<img src="' . esc_attr($src) . '" alt="' . esc_attr($alt) . '" loading="lazy">';
+    }
+    $source = resolve_image(rawurldecode($src));
+    if ($source === null) {
+        $errors[] = "Line $lineNo: can't find image '$src' next to the draft or in the vault.";
+    } elseif (preg_match('#/(back-room|side-door)/#i', $source)) {
+        $errors[] = "Line $lineNo: image '$src' is inside a walled-off vault folder.";
+    } else {
+        $ext = strtolower(pathinfo($source, PATHINFO_EXTENSION));
+        $ext = $ext === 'jpeg' ? 'jpg' : $ext;
+        $stem = trim(strtolower(preg_replace('/[^A-Za-z0-9._-]+/', '-', pathinfo($source, PATHINFO_FILENAME))), '-.');
+        if (!in_array($ext, ['jpg', 'png', 'gif', 'svg', 'webp'], true) || $stem === '') {
+            $errors[] = "Line $lineNo: image '$src' isn't a supported type (jpg, png, gif, svg, webp).";
+            return '';
+        }
+        $raster = in_array($ext, ['jpg', 'png'], true);
+        $plan = ["assets/imgs/$ext/$stem.$ext" => ['op' => $raster ? 'resize' : 'copy', 'source' => $source, 'from' => $source]];
+        if ($raster) {
+            $plan["assets/imgs/webp/$stem.webp"] = ['op' => 'webp', 'source' => "assets/imgs/$ext/$stem.$ext", 'from' => $source];
+        }
+        $published = is_file($notePath) ? file_get_contents($notePath) : '';
+        foreach ($plan as $dest => $job) {
+            if (isset($images[$dest])) {
+                if ($images[$dest]['from'] !== $source) {
+                    $errors[] = "Line $lineNo: image '$src' and another image in this draft would both be written to $dest. Rename one.";
+                }
+            } elseif (is_file("$siteDir/$dest") && !str_contains($published, "/$dest")) {
+                $errors[] = "Line $lineNo: $dest already exists on the site and isn't used by this note. Rename '$src' in the vault so it doesn't overwrite it.";
+            }
+            $images[$dest] ??= $job;
+        }
+        $alt = esc_attr($alt);
+        if (!$raster) {
+            return '<img src="/assets/imgs/' . $ext . '/' . $stem . '.' . $ext . '" alt="' . $alt . '" loading="lazy">';
+        }
+        return "<picture>\n"
+            . '    <source srcset="/assets/imgs/webp/' . $stem . '.webp" type="image/webp" class="scaledimg">' . "\n"
+            . '    <img loading="lazy" src="/assets/imgs/' . $ext . '/' . $stem . '.' . $ext . '" class="scaledimg" alt="' . $alt . "\">\n"
+            . '</picture>';
+    }
+    return '';
+}
+
+/** Fails clearly if ffmpeg or cwebp is missing. */
+function require_image_tools(): void {
+    foreach (['ffmpeg', 'cwebp'] as $tool) {
+        if (run('command -v ' . escapeshellarg($tool)) !== 0) {
+            fail("Images need $tool, but it isn't installed or isn't on the PATH.");
         }
     }
-    return '<img src="' . esc_attr($src) . '" alt="' . esc_attr($alt) . '" loading="lazy">';
+}
+
+/**
+ * Makes one image file. 'resize' shrinks a jpg/png to at most IMAGE_WIDTH wide
+ * (no upscaling, metadata stripped); 'webp' converts an already-resized file;
+ * 'copy' copies as is. Returns an error message, or null on success.
+ */
+function make_image(string $op, string $in, string $out): ?string {
+    if ($op === 'copy') {
+        return copy($in, $out) ? null : "couldn't copy $in to $out";
+    }
+    if ($op === 'resize') {
+        $cmd = 'ffmpeg -nostdin -v error -y -i ' . escapeshellarg($in)
+            . ' -vf ' . escapeshellarg('scale=w=min(' . IMAGE_WIDTH . '\\,iw):h=-2')
+            . ' -map_metadata -1 -frames:v 1'
+            . (str_ends_with($out, '.jpg') ? ' -q:v 3' : '')
+            . ' ' . escapeshellarg($out);
+    } else {
+        $cmd = 'cwebp -quiet -q 80 -metadata none ' . escapeshellarg($in) . ' -o ' . escapeshellarg($out);
+    }
+    $code = run($cmd, $log);
+    if ($code !== 0 || !is_file($out) || filesize($out) === 0) {
+        @unlink($out);
+        return ($op === 'resize' ? 'ffmpeg' : 'cwebp') . " failed on $in (exit $code): " . trim(implode(' ', $log));
+    }
+    return null;
 }
 
 function link_html(string $url, string $textHtml): string {
@@ -605,6 +678,10 @@ function render_blocks(array $lines): array {
         for (; $i < $n && trim($lines[$i][1]) !== '' && !($para && $isBlockStart($lines[$i][1])); $i++) {
             $para[] = inline(rtrim(preg_replace('/(\s{2,}|\\\\)$/', '', $lines[$i][1])), $lines[$i][0]);
         }
+        if (count($para) === 1 && preg_match('#^<picture>.*</picture>$#s', $para[0])) {
+            $blocks[] = ['type' => 'html', 'html' => $para[0]];
+            continue;
+        }
         $blocks[] = ['type' => 'p', 'html' => '<p>' . implode('<br>', $para) . '</p>'];
     }
     return $blocks;
@@ -710,6 +787,7 @@ say('  Tags:      ' . implode(', ', $tags) . ($newTags ? '  (new: ' . implode(',
 say("  Published: " . human_date($published) . ($isUpdate ? '  |  Updated: ' . human_date($updated) : ''));
 say("  Words:     $wordCount (~$readingMinutes min)");
 if ($images) {
+    require_image_tools();
     say('  Images:    ' . implode(', ', array_keys($images)));
 }
 say("  Commit:    $message");
@@ -790,11 +868,15 @@ function rollback(): void {
 // Write the note, its images and its sitemap entry, then build
 // ---------------------------------------------------------------------------
 
-foreach ($images as $dest => $source) {
+foreach ($images as $dest => $job) {
     $abs = "$siteDir/$dest";
     $copiedImages[$dest] = is_file($abs) ? file_get_contents($abs) : null;
     @mkdir(dirname($abs), 0755, true);
-    copy($source, $abs);
+    $in = $job['op'] === 'webp' ? "$siteDir/{$job['source']}" : $job['source'];
+    if (($imageError = make_image($job['op'], $in, $abs)) !== null) {
+        rollback();
+        fail("Image $dest: $imageError");
+    }
 }
 
 file_put_contents($notePath, $noteHtml);
