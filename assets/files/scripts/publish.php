@@ -53,6 +53,8 @@ if (PHP_SAPI !== 'cli') {
     exit;
 }
 
+require_once __DIR__ . '/footer-lib.php';
+
 const SITE_URL = 'https://zacharykai.net';
 const WORDS_PER_MINUTE = 238;
 const SNAPSHOT_EXTENSIONS = ['html', 'xml'];
@@ -756,6 +758,24 @@ if ($errors) {
 }
 
 $tagLinks = implode(' · ', array_map(fn($t) => '<a href="/tags/' . $t . '">' . $t . '</a>', $tags));
+// Commit this build is made from (HEAD, i.e. the parent of the commit about to be made).
+// Exported as env vars so the sitebuild.php child inherits them; invalid values are dropped.
+$commitCount = '';
+$commitHash = '';
+if (git('rev-list --count HEAD', $cOut) === 0 && isset($cOut[0]) && preg_match('/^[0-9]+$/', trim($cOut[0]))) {
+    $commitCount = trim($cOut[0]);
+}
+if (git('rev-parse HEAD', $hOut) === 0 && isset($hOut[0]) && preg_match('/^[0-9a-f]{40}$/', trim($hOut[0]))) {
+    $commitHash = trim($hOut[0]);
+}
+if ($commitCount !== '' && $commitHash !== '') {
+    putenv('SITE_COMMIT_COUNT=' . $commitCount);
+    putenv('SITE_COMMIT_HASH=' . $commitHash);
+} else {
+    putenv('SITE_COMMIT_COUNT');
+    putenv('SITE_COMMIT_HASH');
+}
+
 $noteHtml = strtr(file_get_contents(__DIR__ . '/templates/note.html'), [
     '{{SLUG}}' => $slug,
     '{{TITLE}}' => esc($title),
@@ -768,6 +788,7 @@ $noteHtml = strtr(file_get_contents(__DIR__ . '/templates/note.html'), [
     '{{WORD_COUNT}}' => (string) $wordCount,
     '{{TAG_LINKS}}' => $tagLinks,
     '{{BODY}}' => $bodyHtml,
+    '{{FOOTER}}' => render_footer(commit_footer_html()), // footer-lib.php; the commit line comes from the env vars above
 ]);
 
 $entry = sitemap_entry($title, $noteUrl, $updated, $blurb, $section, $group, $tags);
@@ -920,6 +941,27 @@ $after = snapshot($siteDir);
 $changed = array_keys(array_filter($after, fn($c, $rel) => ($before[$rel] ?? null) !== $c, ARRAY_FILTER_USE_BOTH));
 $changed = array_merge($changed, array_keys($images));
 sort($changed);
+
+// Stamp the changed static pages with the "Page last built from commit N" footer line
+// (footer-sync.php reads the SITE_COMMIT_* env vars exported above). Only pages this
+// publish already changed are touched, so the commit and the deploy stay small. This
+// runs before staging, so the stamped footers are part of the commit.
+$changedHtml = array_values(array_filter($changed, fn($rel) => str_ends_with($rel, '.html')));
+if ($changedHtml) {
+    $syncCode = run(escapeshellarg(PHP_BINARY) . ' ' . escapeshellarg(__DIR__ . '/footer-sync.php') . ' '
+        . implode(' ', array_map(fn($rel) => escapeshellarg("$siteDir/$rel"), $changedHtml)), $syncOutput);
+    if ($syncCode === 1) {
+        say(implode(PHP_EOL, $syncOutput));
+        rollback();
+        fail('The footer sync failed (output above).');
+    }
+    if ($syncCode !== 0) {
+        // 2: some pages have a footer it won't guess at; they're just left unstamped.
+        say();
+        say('Footer sync (those pages keep their own footer):');
+        say(implode(PHP_EOL, $syncOutput));
+    }
+}
 
 say();
 say('Changed files (' . count($changed) . '):');

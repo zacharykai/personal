@@ -16,6 +16,8 @@
  *   php assets/files/scripts/sitebuild.php --offline   # skip Hardcover + location (used by publish.php)
  */
 
+require_once __DIR__ . '/footer-lib.php';
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -1072,6 +1074,7 @@ function bake_static_sitemap(string $site_dir, string $base_url): void {
         $sections .= "                </section>\n";
     }
 
+    $site_footer = render_footer(commit_footer_html());
     $html = <<<HTML
 <!DOCTYPE html>
 <html lang="en-US">
@@ -1197,86 +1200,7 @@ $sections
         <div class="end"></div>
 
         <!-- Footer -->
-        <footer>
-
-            <!-- Support Me -->
-            <section class="support">
-                <h2>Enjoy What I Do? Find It (Hopefully) Helpful?</h2>
-                <p>I'm glad! If you feel moved to <a href="/support">support me</a>, it's most appreciated.</p>
-            </section>
-
-            <hr>
-
-            <!-- H-Card -->
-            <section class="h-card vcard">
-
-                <!-- Avatar -->
-                <section id="h-card-image">
-                    <picture>
-                        <source srcset="/assets/icon.webp" type="image/webp">
-                        <img class="u-photo" loading="lazy" src="/assets/icon.png" alt="Zach's digital drawing: blue/green/purple book stack, decorated with green leaves and purple hearts.">
-                    </picture>
-                </section>
-
-                <!-- Byline -->
-                <section id="h-card-content">
-                    <p>
-                        <!-- Name + URL -->
-                        <strong><a class="u-url u-id p-name" href="https://zacharykai.net" rel="me"><span class="fn">Zachary Kai</span></a></strong> 
-                        — 
-                        <!-- Pronouns-->
-                        <span class="p-pronouns">he/him</span> 
-                        — 
-                        <!-- Email -->
-                        <a class="u-email email" href="mailto:hi@zacharykai.net" rel="me">hi@zacharykai.net</a>
-                        — 
-                        <!-- Biography -->
-                        <span class="p-note">A space fantasy writer, offbeat queer, traveler, zinester, and avowed generalist. The internet is his livelihood and lifeline.</span>
-                    </p>
-                </section>
-
-            </section>
-
-            <hr>
-
-            <!-- Acknowledgement Of Country -->
-            <p><strong>Acknowledgement</strong>: I owe my existence to the <a href="https://kht.org.au/" rel="noopener">Koori people's</a> lands: tended for millennia by the traditional storytellers. What a legacy. May it prevail.</p>
-
-            <hr>
-
-            <!-- Reply Via & Elsewhere -->
-            <p class="footer-icons">
-                <strong>Reply Via</strong>:
-                <a href="/contact" aria-label="Email"><img src="/assets/imgs/svg/envelope.svg" class="nav-icon" alt="Email"></a>
-                <a href="/guestbook" aria-label="Guestbook"><img src="/assets/imgs/svg/book-open.svg" class="nav-icon" alt="Guestbook"></a>
-                <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
-                <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
-                <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
-                <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
-                <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
-            </p>
-
-            <hr>
-
-            <!-- Footer Menu -->
-            <p style="margin-bottom: 0;">
-                <a href="/about">About</a> |
-                <a href="/art">Art</a> |
-                <a href="/accessibility">Accessibility</a> |
-                <a href="/colophon">Colophon</a> |
-                <a href="/changelog">Changelog</a> |
-                <a href="/press">Press</a> | 
-                <a href="/random">Random</a> |
-                <a href="/uses">Uses</a>
-            </p>
-
-            <hr>
-
-            <!-- Final Message -->
-            <p class="essentials" style="margin-top: 2em;">Hi. Yes, you, lovely human. Have a wonderful <a href="https://indieweb.org/Universal_Greeting_Time" rel="noopener">morning</a> and make time for a small moment of joy, wherever you are. ♡</p>
-
-        </footer>
+        {$site_footer}
 
         </div><!-- /.main-content-area -->
 
@@ -1411,86 +1335,7 @@ SIDEBAR;
         <div class="end"></div>
 
         <!-- Footer -->
-        <footer>
-
-            <!-- Support Me -->
-            <section class="support">
-                <h2>Enjoy What I Do? Find It (Hopefully) Helpful?</h2>
-                <p>I'm glad! If you feel moved to <a href="/support">support me</a>, it's most appreciated.</p>
-            </section>
-
-            <hr>
-
-            <!-- H-Card -->
-            <section class="h-card vcard">
-
-                <!-- Avatar -->
-                <section id="h-card-image">
-                    <picture>
-                        <source srcset="/assets/icon.webp" type="image/webp">
-                        <img class="u-photo" loading="lazy" src="/assets/icon.png" alt="Zach's digital drawing: blue/green/purple book stack, decorated with green leaves and purple hearts.">
-                    </picture>
-                </section>
-
-                <!-- Byline -->
-                <section id="h-card-content">
-                    <p>
-                        <!-- Name + URL -->
-                        <strong><a class="u-url u-id p-name" href="https://zacharykai.net" rel="me"><span class="fn">Zachary Kai</span></a></strong> 
-                        — 
-                        <!-- Pronouns-->
-                        <span class="p-pronouns">he/him</span> 
-                        — 
-                        <!-- Email -->
-                        <a class="u-email email" href="mailto:hi@zacharykai.net" rel="me">hi@zacharykai.net</a>
-                        — 
-                        <!-- Biography -->
-                        <span class="p-note">A space fantasy writer, offbeat queer, traveler, zinester, and avowed generalist. The internet is his livelihood and lifeline.</span>
-                    </p>
-                </section>
-
-            </section>
-
-            <hr>
-
-            <!-- Acknowledgement Of Country -->
-            <p><strong>Acknowledgement</strong>: I owe my existence to the <a href="https://kht.org.au/" rel="noopener">Koori people's</a> lands: tended for millennia by the traditional storytellers. What a legacy. May it prevail.</p>
-
-            <hr>
-
-            <!-- Reply Via & Elsewhere -->
-            <p class="footer-icons">
-                <strong>Reply Via</strong>:
-                <a href="/contact" aria-label="Email"><img src="/assets/imgs/svg/envelope.svg" class="nav-icon" alt="Email"></a>
-                <a href="/guestbook" aria-label="Guestbook"><img src="/assets/imgs/svg/book-open.svg" class="nav-icon" alt="Guestbook"></a>
-                <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
-                <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
-                <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
-                <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
-                <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
-            </p>
-
-            <hr>
-
-            <!-- Footer Menu -->
-            <p style="margin-bottom: 0;">
-                <a href="/about">About</a> |
-                <a href="/art">Art</a> |
-                <a href="/accessibility">Accessibility</a> |
-                <a href="/colophon">Colophon</a> |
-                <a href="/changelog">Changelog</a> |
-                <a href="/press">Press</a> | 
-                <a href="/random">Random</a> |
-                <a href="/uses">Uses</a>
-            </p>
-
-            <hr>
-
-            <!-- Final Message -->
-            <p class="essentials" style="margin-top: 2em;">Hi. Yes, you, lovely human. Have a wonderful <a href="https://indieweb.org/Universal_Greeting_Time" rel="noopener">morning</a> and make time for a small moment of joy, wherever you are. ♡</p>
-
-        </footer>
+        {{SITE_FOOTER}}
 
         </div><!-- /.main-content-area -->
 
@@ -1498,6 +1343,7 @@ SIDEBAR;
     </body>
 </html>
 FOOTER;
+    $footer = str_replace('{{SITE_FOOTER}}', render_footer(commit_footer_html()), $footer);
 
     // Build the "Browse Tags" link list used by all pages
     $browse_links = [];
@@ -1730,6 +1576,7 @@ function bake_static_notes_index(string $site_dir): void {
 
     $count = count($posts);
 
+    $site_footer = render_footer(commit_footer_html());
     $html_out = <<<HTML
 <!DOCTYPE html>
 <html lang="en-US">
@@ -1838,86 +1685,7 @@ $items                </ul>
         <div class="end"></div>
 
         <!-- Footer -->
-        <footer>
-
-            <!-- Support Me -->
-            <section class="support">
-                <h2>Enjoy What I Do? Find It (Hopefully) Helpful?</h2>
-                <p>I'm glad! If you feel moved to <a href="/support">support me</a>, it's most appreciated.</p>
-            </section>
-
-            <hr>
-
-            <!-- H-Card -->
-            <section class="h-card vcard">
-
-                <!-- Avatar -->
-                <section id="h-card-image">
-                    <picture>
-                        <source srcset="/assets/icon.webp" type="image/webp">
-                        <img class="u-photo" loading="lazy" src="/assets/icon.png" alt="Zach's digital drawing: blue/green/purple book stack, decorated with green leaves and purple hearts.">
-                    </picture>
-                </section>
-
-                <!-- Byline -->
-                <section id="h-card-content">
-                    <p>
-                        <!-- Name + URL -->
-                        <strong><a class="u-url u-id p-name" href="https://zacharykai.net" rel="me"><span class="fn">Zachary Kai</span></a></strong> 
-                        — 
-                        <!-- Pronouns-->
-                        <span class="p-pronouns">he/him</span> 
-                        — 
-                        <!-- Email -->
-                        <a class="u-email email" href="mailto:hi@zacharykai.net" rel="me">hi@zacharykai.net</a>
-                        — 
-                        <!-- Biography -->
-                        <span class="p-note">A space fantasy writer, offbeat queer, traveler, zinester, and avowed generalist. The internet is his livelihood and lifeline.</span>
-                    </p>
-                </section>
-
-            </section>
-
-            <hr>
-
-            <!-- Acknowledgement Of Country -->
-            <p><strong>Acknowledgement</strong>: I owe my existence to the <a href="https://kht.org.au/" rel="noopener">Koori people's</a> lands: tended for millennia by the traditional storytellers. What a legacy. May it prevail.</p>
-
-            <hr>
-
-            <!-- Reply Via & Elsewhere -->
-            <p class="footer-icons">
-                <strong>Reply Via</strong>:
-                <a href="/contact" aria-label="Email"><img src="/assets/imgs/svg/envelope.svg" class="nav-icon" alt="Email"></a>
-                <a href="/guestbook" aria-label="Guestbook"><img src="/assets/imgs/svg/book-open.svg" class="nav-icon" alt="Guestbook"></a>
-                <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
-                <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
-                <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
-                <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
-                <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
-            </p>
-
-            <hr>
-
-            <!-- Footer Menu -->
-            <p style="margin-bottom: 0;">
-                <a href="/about">About</a> |
-                <a href="/art">Art</a> |
-                <a href="/accessibility">Accessibility</a> |
-                <a href="/colophon">Colophon</a> |
-                <a href="/changelog">Changelog</a> |
-                <a href="/press">Press</a> | 
-                <a href="/random">Random</a> |
-                <a href="/uses">Uses</a>
-            </p>
-
-            <hr>
-
-            <!-- Final Message -->
-            <p class="essentials" style="margin-top: 2em;">Hi. Yes, you, lovely human. Have a wonderful <a href="https://indieweb.org/Universal_Greeting_Time" rel="noopener">morning</a> and make time for a small moment of joy, wherever you are. ♡</p>
-
-        </footer>
+        {$site_footer}
 
         </div><!-- /.main-content-area -->
 
@@ -2001,6 +1769,7 @@ function bake_static_gratitudes_index(string $site_dir): void {
     $today      = date('Y-m-d');
     $today_disp = date('j M Y');
 
+    $site_footer = render_footer(commit_footer_html());
     $html_out = <<<HTML
 <!DOCTYPE html>
 <html lang="en-US">
@@ -2101,86 +1870,7 @@ $cards                </section>
         </section>
 
         <!-- Footer -->
-        <footer>
-
-            <!-- Support Me -->
-            <section class="support">
-                <h2>Enjoy What I Do? Find It (Hopefully) Helpful?</h2>
-                <p>I'm glad! If you feel moved to <a href="/support">support me</a>, it's most appreciated.</p>
-            </section>
-
-            <hr>
-
-            <!-- H-Card -->
-            <section class="h-card vcard">
-
-                <!-- Avatar -->
-                <section id="h-card-image">
-                    <picture>
-                        <source srcset="/assets/icon.webp" type="image/webp">
-                        <img class="u-photo" loading="lazy" src="/assets/icon.png" alt="Zach's digital drawing: blue/green/purple book stack, decorated with green leaves and purple hearts.">
-                    </picture>
-                </section>
-
-                <!-- Byline -->
-                <section id="h-card-content">
-                    <p>
-                        <!-- Name + URL -->
-                        <strong><a class="u-url u-id p-name" href="https://zacharykai.net" rel="me"><span class="fn">Zachary Kai</span></a></strong> 
-                        — 
-                        <!-- Pronouns-->
-                        <span class="p-pronouns">he/him</span> 
-                        — 
-                        <!-- Email -->
-                        <a class="u-email email" href="mailto:hi@zacharykai.net" rel="me">hi@zacharykai.net</a>
-                        — 
-                        <!-- Biography -->
-                        <span class="p-note">A space fantasy writer, offbeat queer, traveler, zinester, and avowed generalist. The internet is his livelihood and lifeline.</span>
-                    </p>
-                </section>
-
-            </section>
-
-            <hr>
-
-            <!-- Acknowledgement Of Country -->
-            <p><strong>Acknowledgement</strong>: I owe my existence to the <a href="https://kht.org.au/" rel="noopener">Koori people's</a> lands: tended for millennia by the traditional storytellers. What a legacy. May it prevail.</p>
-
-            <hr>
-
-            <!-- Reply Via & Elsewhere -->
-            <p class="footer-icons">
-                <strong>Reply Via</strong>:
-                <a href="/contact" aria-label="Email"><img src="/assets/imgs/svg/envelope.svg" class="nav-icon" alt="Email"></a>
-                <a href="/guestbook" aria-label="Guestbook"><img src="/assets/imgs/svg/book-open.svg" class="nav-icon" alt="Guestbook"></a>
-                <a href="/unoffice-hours" aria-label="UnOffice Hours"><img src="/assets/imgs/svg/clock.svg" class="nav-icon" alt="UnOffice Hours"></a>
-                <a href="/webmentions" rel="noopener" aria-label="Webmention"><img src="/assets/imgs/svg/at.svg" class="nav-icon" alt="Webmention"></a>
-                <strong style="margin-left: 0.75em;">Elsewhere</strong>:
-                <a href="https://lunaseeker.com/newsletter/" rel="noopener" aria-label="Newsletter"><img src="/assets/imgs/svg/newspaper.svg" class="nav-icon" alt="Newsletter"></a>
-                <a href="https://ko-fi.com/zacharykai" rel="noopener" aria-label="Ko-fi"><img src="/assets/imgs/svg/coffee.svg" class="nav-icon" alt="Ko-fi"></a>
-                <a href="https://lunaseeker.metalabel.com/" rel="noopener" aria-label="Metalabel"><img src="/assets/imgs/svg/tag.svg" class="nav-icon" alt="Metalabel"></a>
-            </p>
-
-            <hr>
-
-            <!-- Footer Menu -->
-            <p style="margin-bottom: 0;">
-                <a href="/about">About</a> |
-                <a href="/art">Art</a> |
-                <a href="/accessibility">Accessibility</a> |
-                <a href="/colophon">Colophon</a> |
-                <a href="/changelog">Changelog</a> |
-                <a href="/press">Press</a> | 
-                <a href="/random">Random</a> |
-                <a href="/uses">Uses</a>
-            </p>
-
-            <hr>
-
-            <!-- Final Message -->
-            <p class="essentials" style="margin-top: 2em;">Hi. Yes, you, lovely human. Have a wonderful <a href="https://indieweb.org/Universal_Greeting_Time" rel="noopener">morning</a> and make time for a small moment of joy, wherever you are. ♡</p>
-
-        </footer>
+        {$site_footer}
 
     </body>
 </html>
