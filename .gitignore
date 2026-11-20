@@ -5,6 +5,7 @@
 auth/
 micropub/
 assets/*
+!assets/style.css
 !assets/files/
 assets/files/*
 !assets/files/scripts/

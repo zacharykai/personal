@@ -1,0 +1,1159 @@
+/* ---- Global Setup ---- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ---- Fonts ---- */
+
+@font-face {
+    font-family: 'Smythe';
+    src: url('/assets/files/fonts/smythe.woff2') format('woff2'),
+         url('/assets/files/fonts/smythe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('/assets/files/fonts/vollkorn.woff2') format('woff2'),
+         url('/assets/files/fonts/vollkorn.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('/assets/files/fonts/vollkorn-italic.woff2') format('woff2'),
+         url('/assets/files/fonts/vollkorn-italic.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('/assets/files/fonts/courierprime.woff2') format('woff2'),
+         url('/assets/files/fonts/courierprime.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('/assets/files/fonts/courierprimebold.woff2') format('woff2'),
+         url('/assets/files/fonts/courierprimebold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---- Variables ---- */
+
+:root {
+    color-scheme: light dark;
+
+    /* Colour: light-dark(<light>, <dark>) */
+    --body-bg: light-dark(antiquewhite, #1a0f21);
+    --text: light-dark(#2c0735, #e8d4f0);
+    --content-bg: light-dark(#fffaf0, #251631);
+    --content-border: light-dark(#d4c29c, #4a3356);
+    --accent: light-dark(#4e148c, #a78bfa);
+    --accent-hover: light-dark(#5b21b6, #c4b5fd);
+    --sidebar-bg: light-dark(#fcf6e4, #201428);
+    --sidebar-border: light-dark(#d4c29c, #3d2b47);
+    --shadow-color: light-dark(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.3));
+
+    /* Shape, motion, focus */
+    --radius: 8px;
+    --radius-sm: 4px;
+    --border-w: 2px;
+    --shadow: 0 2px 10px var(--shadow-color);
+    --focus-ring: 3px solid var(--accent);
+    --t-fast: 0.15s ease-out;
+    --t-med: 0.3s ease;
+
+    /* Layout */
+    --sidebar-w: 17.5rem;
+}
+
+/* ---- Base Styles ---- */
+
+body {
+    font-family: 'Vollkorn', serif;
+    font-size: clamp(1.25rem, 1.02rem + 0.93vw, 1.6rem);
+    line-height: 1.5;
+    background-color: var(--body-bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Full-width content images (e.g. People and Blogs interview photos).
+   The element may be a <picture>, so its inner <img> must fill it. */
+.interview-img {
+    margin-block: 1.5em;
+}
+
+.interview-img,
+.interview-img img {
+    display: block;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--accent);
+    margin: 1.5em 0;
+}
+
+/* --- Links ---- */
+
+/* Text links: dashed underline that is replaced by a solid one growing in from
+   the left on hover. Zero specificity (:where) so component classes always win. */
+:where(a) {
+    color: var(--accent);
+    text-decoration: underline dashed var(--accent) 2px;
+    text-underline-offset: 0.25em;
+    background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 100% / 0 2px;
+}
+
+:where(a:hover) {
+    text-decoration-color: transparent;
+    background-size: 100% 2px;
+}
+
+/* Links wrapping an image keep the original boxed look. */
+:where(a:has(img)) {
+    text-decoration: none;
+    background: none;
+    border-bottom: 2px dashed var(--accent);
+    position: relative;
+    display: inline-block;
+}
+
+:where(a:has(img))::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    bottom: 0;
+    left: 0;
+}
+
+:where(a:has(img):hover) {
+    border-bottom: 2px solid transparent;
+}
+
+:where(a:has(img):hover)::before {
+    width: 100%;
+}
+
+/* External-link icon */
+:where(a[rel="noopener"]:not(:has(img)))::after {
+    content: url('/assets/imgs/svg/external_link.svg');
+    margin-inline-start: 0.25em;
+    vertical-align: middle;
+}
+
+/* Card-style links: no underline effects of their own */
+.card-link {
+    text-decoration: none;
+    background-image: none;
+}
+
+.card-link::before {
+    display: none;
+}
+
+/* ---- Focus ---- */
+
+:is(a, button, input, select, textarea, summary):focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 3px;
+}
+
+/* ---- Typography ---- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal; /* Smythe has one weight; avoids faux bold */
+    font-family: 'Smythe', serif;
+    color: var(--accent);
+    border-bottom: 3px double var(--accent);
+    padding-bottom: 0.3em;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 1.773rem + 3.307vw, 3.84rem);
+}
+
+h2 {
+    font-size: clamp(2.2rem, 1.533rem + 2.667vw, 3.2rem);
+}
+
+h3 {
+    font-size: clamp(2rem, 1.52rem + 1.92vw, 2.72rem);
+}
+
+h4 {
+    font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.4rem);
+}
+
+main p {
+    line-height: 1.8;
+}
+
+/* Footers nested inside <main> keep the body line-height */
+main footer p {
+    line-height: inherit;
+}
+
+.dropcap::first-letter {
+    float: left;
+    font-size: 3.6em;
+    line-height: 0.9;
+    font-family: 'Smythe', serif;
+    color: var(--accent);
+    margin-inline-end: 0.1em;
+    padding-inline-end: 0.05em;
+    border-inline-end: 1px solid var(--accent);
+    margin-block-start: 0.1em;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    .dropcap::first-letter {
+        -webkit-initial-letter: 2;
+        initial-letter: 2;
+        float: none;
+        font-size: inherit;
+        line-height: inherit;
+        margin-block-start: 0;
+    }
+}
+
+.caption {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+/* ---- Layout ---- */
+
+body {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    grid-template-rows: 1fr;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    height: 100dvh;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: var(--sidebar-w);
+    background-color: var(--sidebar-bg);
+    border-inline-end: var(--border-w) solid var(--sidebar-border);
+    box-shadow: 2px 0 10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 0.2em 1.5em;
+    z-index: 100;
+}
+
+.main-content-area {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 0.2em 2em;
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    max-width: 59.375rem;
+    margin-inline: auto;
+    width: 100%;
+}
+
+/* ---- Main Content Elements --- */
+
+.smalltext {
+    font-size: 0.75em;
+}
+
+.essentials {
+    font-size: 0.55em;
+    line-height: 1;
+}
+
+main li {
+    padding-bottom: 0.75em;
+}
+
+/* --- Details Blocks --- */
+
+details {
+    border: 1px solid var(--accent);
+    padding: 1em;
+    margin: 1.5em 0;
+    box-shadow: inset 1px 1px 3px var(--shadow-color);
+}
+
+summary {
+    font-weight: bold;
+    color: var(--accent);
+    cursor: pointer;
+
+    & :is(h2, h3) {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+/* ---- Code Blocks ---- */
+
+code,
+pre {
+    font-family: 'Courier Prime', ui-monospace, 'Courier New', Courier, monospace;
+    background-color: var(--content-bg);
+}
+
+code {
+    font-size: 0.88em;
+    color: var(--text);
+    border: 1px solid var(--content-border);
+    border-radius: 3px;
+    padding: 0.15em 0.4em;
+}
+
+pre {
+    border: var(--border-w) solid var(--content-border);
+    border-radius: 6px;
+    padding: 1em 1.2em;
+    margin: 1.2em 0;
+    overflow-x: auto;
+
+    & code {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-size: 0.88em;
+        white-space: pre;
+    }
+}
+
+.end {
+    background: url('/assets/imgs/png/divider_light.png') no-repeat center;
+    background-size: contain;
+    height: 2.5em;
+    margin: 0.5em 0;
+}
+
+.book-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    flex-direction: row-reverse;
+}
+
+.button-group,
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* ---- Form Elements ---- */
+
+form {
+    margin: 1.5em 0;
+}
+
+label {
+    display: block;
+    color: var(--accent);
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 31.25rem;
+    padding: 0.5em;
+    font-family: 'Vollkorn', serif;
+    font-size: 1em;
+    color: var(--text);
+    background-color: var(--content-bg);
+    border: var(--border-w) solid var(--accent);
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.5em;
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-hover);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+}
+
+button,
+input[type="submit"] {
+    font-family: 'Smythe', serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: var(--content-bg);
+    background-color: var(--accent);
+    border: var(--border-w) solid var(--accent);
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    margin-top: 1em;
+
+    &:hover {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+}
+
+/* --- Sidebar Elements ---- */
+
+.sidebar .smalltext {
+    margin-bottom: 0;
+}
+
+.estdate {
+    font-size: 0.75em;
+}
+
+.sitetitle {
+    font-family: 'Smythe', serif;
+    font-size: 1.7em;
+    margin-bottom: 0.8em;
+    margin-top: 0;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        padding-top: 0.2em;
+        margin: 0;
+        font-size: 0.7em;
+    }
+
+    & p strong {
+        font-size: 0.9em;
+        margin-bottom: 0.1em;
+    }
+}
+
+.pages {
+    padding-top: 1em;
+}
+
+.highlight {
+    font-family: 'Smythe', serif;
+    font-size: 1.4em;
+    border: var(--border-w) solid var(--accent-hover);
+    padding: 0.6em 0.25em;
+    display: inline-block;
+    font-weight: normal;
+}
+
+/* ---- Sidebar Header Layout ---- */
+
+.sidebar header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5em;
+}
+
+/* ---- Nav Icons ---- */
+
+.nav-icon {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    vertical-align: -0.1em;
+    margin-inline-end: 0.2em;
+    filter: invert(11%) sepia(74%) saturate(3000%) hue-rotate(264deg) brightness(70%) contrast(110%);
+}
+
+/* ---- Sidebar Icon Row ---- */
+
+.sidebar nav .sidebar-icons {
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0;
+    font-size: 1em;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.sidebar-icons .nav-icon {
+    width: 0.8em;
+    height: 0.8em;
+    margin-inline-end: 0;
+}
+
+/* ---- Footer Icon Rows ---- */
+
+.footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.footer-icons .nav-icon {
+    width: 1.1em;
+    height: 1.1em;
+    margin-inline-end: 0;
+}
+
+/* --- Menu Toggle ---- */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+/* ---- Currently Reading ---- */
+
+.currently-reading {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: 1.5em;
+}
+
+.currently-reading-book {
+    text-align: center;
+}
+
+.currently-reading-book img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border: 1px solid var(--content-border);
+}
+
+.currently-reading-book p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---- H-Card ---- */
+
+/* Scoped to .vcard: the footer byline block. A bare .h-card is an inline
+   author byline (p-author h-card) and must not become a flex container. */
+.h-card.vcard {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 0.72em;
+}
+
+.h-card-image {
+    margin-bottom: 0;
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+
+.h-card-content {
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 85%;
+}
+
+/* ---- Directory Grid ---- */
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+
+    & > li {
+        background-color: var(--content-bg);
+        border: 1px solid var(--content-border);
+        padding: 0.8em 1em 0.2em;
+
+        & > ul {
+            list-style: none;
+            padding-inline-start: 0;
+            margin: 0.4em 0 0;
+
+            & > li {
+                padding-bottom: 0.3em;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+/* ---- Tag Grid ---- */
+
+.tag-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6em 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+
+    & > li {
+        border-bottom: 1px solid var(--content-border);
+        padding-bottom: 0.4em;
+    }
+}
+
+/* ---- Wordle Grid ---- */
+
+.wordle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+
+    & article {
+        text-align: center;
+        min-width: 0;
+        font-size: 0.75em;
+    }
+
+    & article p.guesses {
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+}
+
+/* ---- Support Block ---- */
+
+.support {
+    border: 1px solid var(--content-border);
+    padding: 1em;
+    margin: 1.5em 0;
+}
+
+/* ---- Homepage Hub Layout ---- */
+
+/* Hero: Photo + Intro */
+.hub-hero {
+    display: grid;
+    grid-template-columns: minmax(6.875rem, 10rem) 1fr;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.hub-intro p {
+    margin: 0;
+}
+
+.hub-photo {
+    position: relative;
+    aspect-ratio: 1;
+    border: var(--border-w) solid var(--content-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Dither overlay: a 12-frame sprite that steps from full dither to transparent */
+.hub-dither {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/imgs/zkpic-dither-light.png') 0% 0% / 1200% 100% no-repeat;
+    image-rendering: pixelated;
+    transition: background-position 0.75s steps(11);
+}
+
+.hub-photo:hover .hub-dither {
+    background-position: 100% 0%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hub-dither {
+        transition: none;
+    }
+}
+
+/* Work Callout */
+.hub-callout {
+    background-color: var(--sidebar-bg);
+    border: var(--border-w) solid var(--content-border);
+    border-radius: var(--radius);
+    padding: 0.25em 1em;
+    margin: 1.5em 0;
+}
+
+/* Start Here Card Grid */
+.hub-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.hub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+    background-color: var(--content-bg);
+    border: var(--border-w) solid var(--content-border);
+    border-radius: var(--radius);
+    padding: 1em;
+
+    &:hover {
+        border-color: var(--accent);
+    }
+
+    & strong {
+        color: var(--accent);
+        font-family: 'Smythe', serif;
+        font-weight: normal;
+        font-size: 1.15em;
+    }
+
+    & span {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+}
+
+.hub-card-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Latest Notes List */
+.hub-notes ul {
+    padding-inline-start: 1.2em;
+}
+
+/* Things I Make Tile Strip */
+.hub-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.hub-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    background-color: var(--content-bg);
+    border: var(--border-w) solid var(--content-border);
+    border-radius: var(--radius);
+    padding: 0.8em 1em;
+
+    &:hover {
+        border-color: var(--accent);
+    }
+
+    & strong {
+        color: var(--accent);
+    }
+
+    & span {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    &[rel="noopener"]::after {
+        display: none;
+    }
+}
+
+/* Say Hello Buttons */
+.hub-hello {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.hub-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: var(--sidebar-bg);
+    border: var(--border-w) solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.5em 1em;
+    font-weight: bold;
+}
+
+/* Webrings Summary */
+.hub-webrings > summary {
+    cursor: pointer;
+}
+
+/* ---- Feed Cards ---- */
+
+.feed-card {
+    background-color: var(--sidebar-bg);
+    border: 1px solid var(--content-border);
+    padding: 0.65em 0.9em;
+
+    & strong {
+        display: block;
+        margin-bottom: 0.2em;
+    }
+
+    & p {
+        margin: 0;
+        font-size: 0.82em;
+        line-height: 1.4;
+    }
+}
+
+.hub-cards--tags {
+    grid-template-columns: repeat(auto-fill, minmax(8.125rem, 1fr));
+}
+
+/* ---- Motion (only for people who have not asked for less) ---- */
+
+@media (prefers-reduced-motion: no-preference) {
+    :where(a) {
+        transition: background-size 0.3s ease-out, text-decoration-color 0.3s ease-out;
+    }
+
+    :where(a:has(img))::before {
+        transition: width 0.3s ease-out;
+    }
+
+    select,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        transition: border-color var(--t-med), box-shadow var(--t-med);
+    }
+
+    button,
+    input[type="submit"] {
+        transition: background-color var(--t-med), transform 0.1s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    .menu-icon span {
+        transition: 0.3s;
+    }
+
+    .hub-card,
+    .hub-tile {
+        transition: transform var(--t-fast), border-color var(--t-fast);
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    .hub-button {
+        transition: transform var(--t-fast);
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}
+
+/* ---- Dark Mode (assets that cannot use light-dark()) ---- */
+
+@media (prefers-color-scheme: dark) {
+    :where(a[rel="noopener"]:not(:has(img)))::after {
+        filter: invert(1) hue-rotate(180deg) brightness(1.3);
+    }
+
+    .nav-icon {
+        filter: invert(72%) sepia(40%) saturate(800%) hue-rotate(210deg) brightness(105%) contrast(95%);
+    }
+
+    .end {
+        background-image: url('/assets/imgs/png/divider_dark.png');
+    }
+
+    .hub-dither {
+        background-image: url('/assets/imgs/zkpic-dither-dark.png');
+    }
+}
+
+/* ---- Responsive Design ---- */
+
+@media (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        border-inline-end: none;
+        border-bottom: var(--border-w) solid var(--sidebar-border);
+        box-shadow: var(--shadow);
+        margin-top: 0;
+        padding: 0 1.5em 0.2em;
+    }
+
+    .main-content-area {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding: 1em;
+    }
+
+    .h-card.vcard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h-card-image {
+        max-width: 100%;
+    }
+
+    .directory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tag-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mobile Menu Styles */
+
+    /* Visually hidden but still focusable; the label (.menu-icon) is the visible control */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        opacity: 0;
+    }
+
+    .menu-toggle:focus-visible ~ header .menu-icon {
+        outline: var(--focus-ring);
+        outline-offset: 4px;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 100;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        user-select: none;
+        flex-shrink: 0;
+    }
+
+    .sidebar > p:first-child {
+        margin-top: 0;
+    }
+
+    .sidebar header {
+        position: relative;
+        margin-top: 0;
+    }
+
+    .sidebar .sitetitle {
+        margin: 0;
+    }
+
+    .sidebar nav {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .menu-toggle:checked ~ header nav {
+        max-height: 2000px;
+    }
+
+    /* Hamburger Icon Animation */
+    .menu-toggle:checked ~ header .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .menu-toggle:checked ~ header .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ header .menu-icon span:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
+    .sidebar nav p strong {
+        font-size: 1.25rem;
+        display: block;
+        padding: 0.875rem 0 0.25rem;
+    }
+
+    .sidebar nav a {
+        font-size: 1.25rem;
+        display: block;
+        padding: 0.625rem 0;
+        border-bottom: 1px dashed var(--sidebar-border);
+    }
+
+    /* Hide elements on mobile */
+    .sidebar .highlight,
+    .sidebar .smalltext {
+        margin: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+    .sidebar nav {
+        transition: max-height 0.3s ease-out;
+    }
+
+    .menu-toggle:checked ~ header nav {
+        transition: max-height 0.5s ease-in;
+    }
+}
+
+@media (max-width: 600px) {
+    .tag-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-photo {
+        max-width: 10rem;
+    }
+}
+
+/* ---- Print ---- */
+
+@media print {
+    :root {
+        color-scheme: light;
+    }
+
+    body {
+        display: block;
+        background: none;
+        color: #000;
+        min-height: 0;
+    }
+
+    .sidebar,
+    .menu-icon,
+    .menu-toggle,
+    .end {
+        display: none !important;
+    }
+
+    .main-content-area {
+        display: block;
+        max-width: none;
+        padding: 0;
+        background: none;
+    }
+
+    .directory-grid,
+    .tag-grid,
+    .hub-cards,
+    .hub-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    a {
+        background: none;
+        text-decoration: underline;
+    }
+
+    /* Drop the external-link icon; show the URL instead for external links */
+    :where(a[rel="noopener"]:not(:has(img)))::after {
+        content: none;
+    }
+
+    a[href^="http"]:not(:has(img))::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        margin: 0;
+        filter: none;
+        word-break: break-all;
+    }
+}
