@@ -17,6 +17,7 @@
         <meta name="date" content="{{PUBLISHED}}">
         <meta name="last-modified" content="{{UPDATED}}">
         <meta name="description" content="{{DESCRIPTION}}">
+        {{ISSUE_META}}
     </head>
 
     <!-- Body -->
@@ -64,6 +65,7 @@
             <header>
                 <!-- Breadcrumbs -->
                 <p class="essentials"><a href="/">Homepage</a> • <a href="/sitemap#notes">Notes</a> ↴</p>
+                {{ISSUE_KICKER}}
                 <!-- Page Title -->
                 <h1 class="p-name">{{TITLE}}</h1>
                 <!-- Necessary Metadata -->
@@ -76,6 +78,7 @@
                 <details class="essentials">
                     <summary>Expand For Other (Hopefully Useful) Metadata</summary>
                     <ul>
+                        {{ISSUE_DETAIL}}
                         <li>Reading Time: ~{{READING_MINUTES}} min (at 238 WPM)</li>
                         <li>Word Count: {{WORD_COUNT}}</li>
                     </ul>

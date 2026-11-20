@@ -29,7 +29,13 @@
  *   Note Blurb        optional sitemap line (defaults to the description)
  *   Note Published    optional, to backdate a new note
  * Written back after publishing: Note Status, Note Type, Note Published,
- * Note Updated, Note URL.
+ * Note Updated, Note URL, Note Issue.
+ *
+ * Issue: a new note (other than list-* or newsletter-*) takes the next number
+ * from the counter file next-issue.txt, which is then incremented; the number
+ * goes on the sitemap entry as <zk:issue> and the page's kicker, meta tag and
+ * metadata line are rendered from it. Republishing a note keeps the number on
+ * its sitemap entry and never touches the counter. See issue-lib.php.
  *
  * Images: ![[photo.jpg|alt text]] embeds are found in the vault, sorted by type
  * into assets/imgs/<ext>/ (.jpeg becomes .jpg), resized to at most 900px wide
@@ -54,6 +60,7 @@ if (PHP_SAPI !== 'cli') {
 }
 
 require_once __DIR__ . '/footer-lib.php';
+require_once __DIR__ . '/issue-lib.php';
 
 const SITE_URL = 'https://zacharykai.net';
 const WORDS_PER_MINUTE = 238;
@@ -325,12 +332,13 @@ function find_entry(string $xml, string $url): ?array {
     return [$start, $end + strlen("    </url>\n") - $start];
 }
 
-function sitemap_entry(string $title, string $url, string $lastmod, string $blurb, string $section, string $group, array $tags): string {
+function sitemap_entry(string $title, string $url, string $lastmod, string $blurb, string $section, string $group, array $tags, ?int $issue = null): string {
     $x = fn($s) => htmlspecialchars($s, ENT_XML1 | ENT_NOQUOTES, 'UTF-8');
     $comment = str_replace('--', '–', $title);
     return "    <url>\n"
         . "        <!-- $comment -->\n"
         . "        <zk:title>{$x($title)}</zk:title>\n"
+        . ($issue !== null ? "        <zk:issue>$issue</zk:issue>\n" : '')
         . "        <loc>$url</loc>\n"
         . "        <lastmod>$lastmod</lastmod>\n"
         . "        <zk:content>{$x($blurb)}</zk:content>\n"
@@ -398,6 +406,28 @@ if ($slug !== '' && is_file($notePath)) {
     }
 }
 $updated = $isUpdate ? $today : $published;
+
+// ---------------------------------------------------------------------------
+// Issue number
+// ---------------------------------------------------------------------------
+
+// A note keeps the Issue already on its sitemap entry, so a republish never
+// consumes the counter. Only a new, eligible note takes the next number.
+$issue = null;
+$issueFromCounter = false;
+$existingEntry = $slug !== '' ? find_entry($sitemap, $noteUrl) : null;
+if ($existingEntry) {
+    $issue = issue_from_entry(substr($sitemap, $existingEntry[0], $existingEntry[1]));
+}
+if ($issue === null && $slug !== '' && issue_eligible($slug) && !$isUpdate) {
+    $issue = issue_counter_read();
+    if ($issue === null) {
+        $errors[] = 'The Issue counter ' . basename(ISSUE_COUNTER_FILE) . " is missing or isn't a whole number. "
+            . 'Run issue-backfill.php first, or restore the file.';
+    } else {
+        $issueFromCounter = true;
+    }
+}
 
 // ---------------------------------------------------------------------------
 // Markdown -> HTML
@@ -776,7 +806,7 @@ if ($commitCount !== '' && $commitHash !== '') {
     putenv('SITE_COMMIT_HASH');
 }
 
-$noteHtml = strtr(file_get_contents(__DIR__ . '/templates/note.html'), [
+$noteHtml = strtr(issue_fill(file_get_contents(__DIR__ . '/templates/note.html'), $issue), [
     '{{SLUG}}' => $slug,
     '{{TITLE}}' => esc($title),
     '{{DESCRIPTION}}' => esc_attr($description),
@@ -791,7 +821,7 @@ $noteHtml = strtr(file_get_contents(__DIR__ . '/templates/note.html'), [
     '{{FOOTER}}' => render_footer(commit_footer_html()), // footer-lib.php; the commit line comes from the env vars above
 ]);
 
-$entry = sitemap_entry($title, $noteUrl, $updated, $blurb, $section, $group, $tags);
+$entry = sitemap_entry($title, $noteUrl, $updated, $blurb, $section, $group, $tags, $issue);
 
 $plainTitle = strtolower($title);
 $message = $opts['message'] ?? ($isUpdate
@@ -800,6 +830,11 @@ $message = $opts['message'] ?? ($isUpdate
 
 say(($isUpdate ? 'Updating' : 'Publishing') . ": $title");
 say("  URL:       $noteUrl");
+if ($issue !== null) {
+    say("  Issue:     No. $issue" . ($issueFromCounter ? '  (next from the counter)' : '  (kept)'));
+} elseif ($isUpdate && $slug !== '' && issue_eligible($slug)) {
+    say('  Issue:     none on its sitemap entry yet (run issue-backfill.php to number it)');
+}
 say("  Section:   $section" . ($group !== '' ? " / $group" . ($newGroup ? '  (new group)' : '') : ''));
 if (isset(COLLECTION_GROUPS[$group])) {
     say('  Listed on: ' . COLLECTION_GROUPS[$group][0] . ' (' . COLLECTION_GROUPS[$group][2] . ')');
@@ -902,6 +937,16 @@ foreach ($images as $dest => $job) {
 
 file_put_contents($notePath, $noteHtml);
 
+// The counter moves on with the note, and a rollback puts it back like any other file.
+$counterRel = substr(ISSUE_COUNTER_FILE, strlen($siteDir) + 1);
+if ($issueFromCounter) {
+    $copiedImages[$counterRel] = file_get_contents(ISSUE_COUNTER_FILE);
+    if (!issue_counter_write($issue + 1)) {
+        rollback();
+        fail("Couldn't update " . basename(ISSUE_COUNTER_FILE) . '.');
+    }
+}
+
 $found = find_entry($sitemap, $noteUrl);
 if ($found) {
     $sitemap = substr_replace($sitemap, $entry, $found[0], $found[1]);
@@ -939,7 +984,7 @@ if ($buildFailed) {
 
 $after = snapshot($siteDir);
 $changed = array_keys(array_filter($after, fn($c, $rel) => ($before[$rel] ?? null) !== $c, ARRAY_FILTER_USE_BOTH));
-$changed = array_merge($changed, array_keys($images));
+$changed = array_merge($changed, array_keys($images), $issueFromCounter ? [$counterRel] : []);
 sort($changed);
 
 // Stamp the changed static pages with the "Page last built from commit N" footer line
@@ -1136,9 +1181,12 @@ if ($isUpdate) {
     $fmLines = set_frontmatter($fmLines, 'Note Updated', $updated, false);
 }
 $fmLines = set_frontmatter($fmLines, 'Note URL', $noteUrl, false);
+if ($issue !== null) {
+    $fmLines = set_frontmatter($fmLines, 'Note Issue', (string) $issue, false);
+}
 [, $originalBody] = split_draft($draftText);
 file_put_contents($draftPath, "---\n" . implode("\n", $fmLines) . "\n---\n" . $originalBody);
-say('Draft updated with Note Status, Note Published' . ($isUpdate ? ', Note Updated' : '') . ' and Note URL.');
+say('Draft updated with Note Status, Note Published' . ($isUpdate ? ', Note Updated' : '') . ($issue !== null ? ', Note URL and Note Issue.' : ' and Note URL.'));
 
 // ---------------------------------------------------------------------------
 // Ship: push to every remote, then deploy

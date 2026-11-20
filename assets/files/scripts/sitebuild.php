@@ -17,6 +17,7 @@
  */
 
 require_once __DIR__ . '/footer-lib.php';
+require_once __DIR__ . '/issue-lib.php';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -795,6 +796,7 @@ function bake_static_homepage(string $site_dir): void {
     // Build the latest-notes list from the notes/ root folder only
     $notes_dir = $site_dir . 'notes/';
     $posts     = [];
+    $issues    = issue_map_from_sitemap((string) @file_get_contents($site_dir . 'sitemap.xml'));
 
     foreach (glob($notes_dir . '*.html') ?: [] as $file_path) {
         // Skip subfolder index pages (file whose base name matches a subdirectory)
@@ -820,6 +822,7 @@ function bake_static_homepage(string $site_dir): void {
                 'date_attr'    => $date_attr,
                 'display_date' => date('j M Y', strtotime($date_attr)),
                 'url'          => '/notes/' . $slug,
+                'issue'        => $issues[$slug] ?? null,
             ];
         }
     }
@@ -829,7 +832,8 @@ function bake_static_homepage(string $site_dir): void {
 
     $items = '';
     foreach ($latest as $post) {
-        $items .= '                    <li><a href="' . htmlspecialchars($post['url']) . '">'
+        $items .= '                    <li>' . ($post['issue'] !== null ? 'No. ' . $post['issue'] . ' · ' : '')
+                . '<a href="' . htmlspecialchars($post['url']) . '">'
                 . htmlspecialchars($post['title']) . '</a> | '
                 . htmlspecialchars($post['display_date']) . "</li>\n";
     }
@@ -1536,6 +1540,7 @@ function bake_static_notes_index(string $site_dir): void {
     $index_file = $notes_dir . 'index.html';
 
     $posts = [];
+    $issues = issue_map_from_sitemap((string) @file_get_contents($site_dir . 'sitemap.xml'));
 
     foreach (glob($notes_dir . '*.html') ?: [] as $file_path) {
         $base = pathinfo($file_path, PATHINFO_FILENAME);
@@ -1561,6 +1566,7 @@ function bake_static_notes_index(string $site_dir): void {
                 'date_attr'    => $date_attr,
                 'display_date' => date('j M Y', strtotime($date_attr)),
                 'url'          => '/notes/' . $base,
+                'issue'        => $issues[$base] ?? null,
             ];
         }
     }
@@ -1571,7 +1577,7 @@ function bake_static_notes_index(string $site_dir): void {
 
     $items = '';
     foreach ($posts as $post) {
-        $items .= '                    <li><a href="' . $e($post['url']) . '">' . $e($post['title']) . '</a> | ' . $e($post['display_date']) . "</li>\n";
+        $items .= '                    <li>' . ($post['issue'] !== null ? 'No. ' . $post['issue'] . ' · ' : '') . '<a href="' . $e($post['url']) . '">' . $e($post['title']) . '</a> | ' . $e($post['display_date']) . "</li>\n";
     }
 
     $count = count($posts);
