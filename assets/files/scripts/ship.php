@@ -151,10 +151,10 @@ for ($i = 0; $i < count($fields) && $fields[$i] !== ''; ) {
 
 foreach ($extras as $extra) {
     $real = realpath($siteDir . '/' . ltrim($extra, '/'));
-    if ($real === false || !is_file($real) || !str_starts_with($real, realpath($siteDir) . '/')) {
+    if ($real === false || !is_file($real) || !str_starts_with($real, realpath($siteDir) . DIRECTORY_SEPARATOR)) {
         fail("Extra path is not a file in the site repo: $extra");
     }
-    $upload[] = substr($real, strlen(realpath($siteDir)) + 1);
+    $upload[] = str_replace('\\', '/', substr($real, strlen(realpath($siteDir)) + 1));
 }
 $upload = array_values(array_unique($upload));
 sort($upload);
@@ -165,7 +165,10 @@ $deployFiles = array_values(array_diff($upload, $skipped));
 // Uploads come from the working tree, so a file with uncommitted edits would
 // put work on the server that git doesn't have. A push-only ship uploads nothing.
 if ($deployFiles && !$opts['no-deploy']) {
-    git('diff --name-only HEAD -- ' . implode(' ', array_map('escapeshellarg', $deployFiles)), $dirty);
+    // Diff the whole tree and intersect, so a long file list can't overflow
+    // the command line (Windows caps it at about 8,000 characters).
+    git('diff --name-only HEAD', $dirty);
+    $dirty = array_values(array_intersect($dirty, $deployFiles));
     if ($dirty) {
         fail("These files would be deployed but have uncommitted changes. Commit or stash them first:\n  "
             . implode("\n  ", $dirty));
