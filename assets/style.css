@@ -1106,6 +1106,65 @@ input[type="submit"] {
 
 /* ---- Print ---- */
 
+/* ---- Guestbook ---- */
+
+/* One card per entry; the owner's reply sits inside it, set off by a left rule */
+.gb-entry {
+    background: color-mix(in srgb, var(--accent) 5%, var(--content-bg));
+    border: var(--border-w) solid var(--content-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 1.25em 0;
+    padding: 0.9em 1.1em;
+}
+
+.gb-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.1em 0.75em;
+    margin: 0 0 0.5em;
+    font-size: 0.8em;
+    line-height: 1.3;
+}
+
+.gb-name {
+    font-family: 'Smythe', serif;
+    font-weight: normal; /* Smythe has one weight; avoids faux bold */
+    font-size: 1.3em;
+    color: var(--accent);
+}
+
+.gb-meta time {
+    opacity: 0.8;
+}
+
+.gb-message {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.gb-reply {
+    margin: 1em 0 0 0.5em;
+    padding-left: 1em;
+    border-left: 3px solid var(--accent);
+}
+
+.gb-reply .gb-meta {
+    margin-bottom: 0.25em;
+}
+
+.gb-reply .gb-name {
+    font-size: 1.1em;
+}
+
+@media print {
+    .gb-entry {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
+
 @media print {
     :root {
         color-scheme: light;
